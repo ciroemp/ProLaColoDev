@@ -179,6 +179,27 @@ footer {
     box-shadow: none;
 }
 
+.responsive-title {
+    /* Reducimos el mínimo de 2rem a 1.6rem para emergencias en móviles muy pequeños */
+    font-size: clamp(1.6rem, 8vw, 3.8rem); 
+    line-height: 1.1;
+    
+    /* Esta es la propiedad clave */
+    overflow-wrap: anywhere; 
+    word-break: normal;
+    
+    /* Evita que el texto intente quedarse en una sola línea a toda costa */
+    white-space: normal; 
+}
+
+/* Reducir el espacio lateral del contenedor en móviles para ganar área de texto */
+@media (max-width: 576px) {
+    .hero .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 /* 11. RESPONSIVE */
 @media (max-width: 768px) {
     .logo-main {
