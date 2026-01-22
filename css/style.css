@@ -167,6 +167,18 @@ footer {
     padding: 60px 0;
 }
 
+/* Agrégalo a la sección 7 u 8 de tu style.css */
+.form-control {
+    border-radius: 0;
+    border: 1px solid #dee2e6;
+    padding: 12px;
+}
+
+.form-control:focus {
+    border-color: var(--rose-gold);
+    box-shadow: none;
+}
+
 /* 11. RESPONSIVE */
 @media (max-width: 768px) {
     .logo-main {
