@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"> <head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="site_title">LaColo Dev & Creative | Engineering & Design Excellence</title>
@@ -27,13 +29,13 @@
                     <li class="nav-item"><a class="nav-link" href="#foundation" data-i18n="nav_projects">Proyectos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav_subs">Suscripciones</a></li>
                     <li class="nav-item"><a class="nav-link" href="#impact" data-i18n="nav_impact">Impacto</a></li>
-                    <li class="nav-item mx-lg-3 p-3 ">
+                    <li class="nav-item mx-lg-3 p-2">
                         <select id="languageSelector" class="form-select form-select-sm bg-transparent text-white border-secondary">
                             <option value="en">EN</option>
                             <option value="es" selected>ES</option>
                         </select>
                     </li>
-                    <li class="nav-item ms-lg-2 my-auto p-2">
+                    <li class="nav-item ms-lg-2 my-auto">
                         <a href="#contact" class="btn btn-lacolo btn-sm w-100 fw-bold" data-i18n="btn_get_started">Get Started</a>
                     </li>
                 </ul>
@@ -48,7 +50,7 @@
                     <h1 class="fw-bolder mb-4" data-i18n="hero_title">High-Performance Web Development with a <span class="text-rose">Creative Soul.</span></h1>
                     <p class="lead mb-5 opacity-75" data-i18n="hero_lead">Construimos experiencias digitales seguras, rápidas e impactantes. Potenciado por la ingeniería, protegido por Cloudflare e impulsado por el impacto social.</p>
                     <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-                        <a href="#foundation" class="btn btn-lacolo">Build My Digital Home</a>
+                        <a href="#foundation" class="btn btn-lacolo" data-i18n="btn_build">Build My Digital Home</a>
                         <a href="#contact" class="btn btn-outline-dark px-4 py-2 fw-bold" data-i18n="btn_consultation">Free Consultation</a>
                     </div>
                 </div>
@@ -87,10 +89,67 @@
                             <ul class="list-unstyled text-start mb-5 small">
                                 <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_landing_1">Una página de alta conversión</span></li>
                                 <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_landing_2">Diseño enfocado en ventas/leads</span></li>
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_landing_3">Integración de formularios</span></li>
+                                <li class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_landing_3">Integración de formularios</span></li>
                                 <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_landing_4">Auditoría de seguridad inicial</span></li>
                             </ul>
                             <a href="#contact" class="btn btn-outline-dark w-100 fw-bold" data-i18n="btn_request_landing">Solicitar Landing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding" style="background-color: var(--pearl-white);">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="services_title">The Peace of Mind <br><small class="fs-6 opacity-50" data-i18n="services_subtitle">Modelos de Suscripción</small></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 card-pricing p-4">
+                        <div class="card-body">
+                            <h3 class="h5 mb-3" data-i18n="card_sentinel_title">Web Sentinel</h3>
+                            <h4 class="h3 fw-bold mb-4 text-center">$75 - $95 <small class="fs-6 opacity-50">/mo</small></h4>
+                            <p class="small mb-4" data-i18n="card_sentinel_desc">Ideal para que su web "siempre funcione".</p>
+                            <ul class="list-unstyled small mb-5">
+                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_sentinel_1">Hosting & DNS Cloudflare</span></li>
+                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_sentinel_2">Copias de seguridad mensuales</span></li>
+                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_sentinel_3">1h de cambios técnicos</span></li>
+                            </ul>
+                            <div class="bg-light p-2 text-center mb-3">
+                                <span class="small fw-bold" data-i18n="church_promo">Iglesias: $50/mo</span>
+                            </div>
+                            <a href="#contact" class="btn btn-outline-dark w-100" data-i18n="btn_subscribe">Suscribirse</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-pricing featured p-4" style="border-color: var(--rose-gold); border-width: 2px;">
+                        <div class="card-body">
+                            <span class="badge bg-dark mb-2" data-i18n="badge_popular">MOST POPULAR</span>
+                            <h3 class="h5 mb-3" data-i18n="card_pulse_title">Digital Pulse</h3>
+                            <h4 class="h3 fw-bold mb-4 text-center">$250 - $350 <small class="fs-6 opacity-50">/mo</small></h4>
+                            <p class="small mb-4" data-i18n="card_pulse_desc">Web + Contenido para nuevos clientes.</p>
+                            <ul class="list-unstyled small mb-5">
+                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_pulse_1">Todo en Web Sentinel</span></li>
+                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_pulse_2">4 piezas gráficas RRSS</span></li>
+                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_pulse_3">2 actualizaciones de contenido</span></li>
+                            </ul>
+                            <a href="#contact" class="btn btn-lacolo w-100" data-i18n="btn_subscribe">Suscribirse</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-pricing p-4 bg-dark text-white">
+                        <div class="card-body">
+                            <h3 class="h5 mb-3 text-rose" data-i18n="card_visionary_title">Visionary</h3>
+                            <h4 class="h3 fw-bold mb-4 text-center">$600 - $850 <small class="fs-6 opacity-50">/mo</small></h4>
+                            <p class="small mb-4 opacity-75" data-i18n="card_visionary_desc">Full Audiovisual & Tech para destacar.</p>
+                            <ul class="list-unstyled small mb-5">
+                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_visionary_1">Todo lo anterior</span></li>
+                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_visionary_2">1 Video Reel (60s) mensual</span></li>
+                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span data-i18n="feat_visionary_3">Optimización SEO constante</span></li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-light w-100" data-i18n="btn_subscribe">Suscribirse</a>
                         </div>
                     </div>
                 </div>
@@ -136,6 +195,11 @@
                     <div class="row g-0">
                         <div class="col-md-5 bg-dark text-white p-5 d-flex flex-column justify-content-center">
                             <h2 class="brand-titles text-rose mb-4" data-i18n="contact_hablemos">Hablemos</h2>
+                            <p class="small mb-2">
+                                <a href="https://wa.me/+50377471010" class="text-white text-decoration-none">
+                                    <i class="bi bi-whatsapp me-2"></i>+503 7747-1010
+                                </a>
+                            </p>
                             <p class="small opacity-50" data-i18n="contact_sub">Atención directa para proyectos de desarrollo y creativos.</p>
                         </div>
                         <div class="col-md-7 p-5 bg-white">
@@ -165,9 +229,9 @@
     </section>
 
     <footer>
-        <div class="container text-center">
+        <div class="container text-center py-4">
             <h2 class="brand-titles text-rose mb-4">LACOLO</h2>
-            <p class="small opacity-50 mb-0">&copy; 2026 LaColo Dev & Creative. Based in El Salvador 🇸🇻</p>
+            <p class="small opacity-50 mb-0" data-i18n="footer_copy">&copy; 2026 LaColo Dev & Creative. Based in El Salvador 🇸🇻</p>
         </div>
     </footer>
 
