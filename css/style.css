@@ -207,7 +207,7 @@ footer {
 }
 
 /* Forzar que cada bloque de texto ocupe su línea en móviles */
-@media (max-width: 576px) {
+@media (max-width: 550px) {
     .responsive-title span {
         display: block;
         width: 100%;
@@ -215,13 +215,6 @@ footer {
     }
 }
 
-/* Reducir el espacio lateral del contenedor en móviles para ganar área de texto */
-@media (max-width: 576px) {
-    .hero .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
 
 /* 11. RESPONSIVE */
 @media (max-width: 768px) {
