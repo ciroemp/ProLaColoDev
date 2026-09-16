@@ -32,14 +32,14 @@ var QUOTE_AREAS_ES = [
         items: [
           { id: 'cp-base', name: 'Base: estructura + 1ª página incluida', price: 350, kind: 'check' },
           { id: 'cp-page', name: 'Página adicional', price: 60, kind: 'qty' },
-          { id: 'cp-cms', name: 'Blog/CMS editable', price: 150, kind: 'check' },
+          { id: 'cp-cms', name: 'Blog/CMS editable (incluye hosting dinámico: $10/mes)', price: 160, kind: 'check' },
           { id: 'cp-multi', name: 'Multi-idioma', price: 80, kind: 'check' }
         ]
       },
       {
         name: 'Tienda Online',
         items: [
-          { id: 'ti-base', name: 'Base: carrito + 1 método de pago', price: 650, kind: 'check' },
+          { id: 'ti-base', name: 'Base: carrito + 1 método de pago (incluye hosting dinámico: $10/mes)', price: 660, kind: 'check' },
           { id: 'ti-page', name: 'Página adicional', price: 60, kind: 'qty' },
           {
             id: 'ti-catalog', name: 'Catálogo de productos', kind: 'radio', options: [
@@ -63,23 +63,9 @@ var QUOTE_AREAS_ES = [
     tagline: 'Responde a tus clientes automáticamente, donde sea que te escriban.',
     disabled: false,
     items: [
-      { id: 'web-bot', name: 'Chatbot de atención al cliente con IA (sitio web)', price: 120, kind: 'check' },
+      { id: 'web-bot', name: 'Chatbot de atención al cliente con IA (sitio web) (incluye hosting dinámico: $10/mes)', price: 130, kind: 'check' },
       { id: 'wa-link', name: 'WhatsApp — botón directo en tu sitio web', price: 25, kind: 'check' },
-      { id: 'wa-bot', name: 'WhatsApp — con automatización/chatbot', kind: 'check', soon: true },
-      { id: 'ig-dm', name: 'Instagram DM con IA', kind: 'check', soon: true },
-      { id: 'fb-dm', name: 'Facebook Messenger con IA', kind: 'check', soon: true }
-    ]
-  },
-  {
-    id: 'analitica-reportes',
-    name: 'Analítica y Reportes',
-    icon: 'bi-bar-chart',
-    tagline: 'Entiende a tus visitantes y el rendimiento de tu sitio.',
-    disabled: false,
-    items: [
-      { id: 'analytics-setup', name: 'Configuración de analítica de comportamiento (mapas de calor, tráfico, panel propio)', price: 60, kind: 'check' },
-      { id: 'reports-auto', name: 'Automatización de reportes internos', kind: 'check', soon: true },
-      { id: 'biz-dashboard', name: 'Panel de métricas de negocio', kind: 'check', soon: true }
+      { id: 'ig-dm', name: 'Instagram DM con IA', kind: 'check', soon: true }
     ]
   },
   {
@@ -112,11 +98,10 @@ var QUOTE_AREAS_ES = [
     id: 'marketing-contenido',
     name: 'Marketing y Contenido',
     icon: 'bi-stars',
-    tagline: 'Contenido y campañas que mantienen viva tu marca.',
-    disabled: true,
+    tagline: 'Piezas gráficas y contenido mensual para tus redes, creado por un diseñador gráfico.',
+    disabled: false,
     items: [
-      { id: 'email-seq', name: 'Email marketing (secuencia de bienvenida)', kind: 'check', soon: true },
-      { id: 'social-ai', name: 'Contenido para redes con IA', kind: 'check', soon: true }
+      { id: 'social-content', name: 'Marketing y Contenido (diseño gráfico para redes)', kind: 'check', customQuote: true, range: '$100 – $200 / mes' }
     ]
   }
 ];
@@ -147,14 +132,14 @@ var QUOTE_AREAS_EN = [
         items: [
           { id: 'cp-base', name: 'Base: structure + 1st page included', price: 350, kind: 'check' },
           { id: 'cp-page', name: 'Additional page', price: 60, kind: 'qty' },
-          { id: 'cp-cms', name: 'Editable Blog/CMS', price: 150, kind: 'check' },
+          { id: 'cp-cms', name: 'Editable Blog/CMS (includes dynamic hosting: $10/mo)', price: 160, kind: 'check' },
           { id: 'cp-multi', name: 'Multi-language', price: 80, kind: 'check' }
         ]
       },
       {
         name: 'Online Store',
         items: [
-          { id: 'ti-base', name: 'Base: cart + 1 payment method', price: 650, kind: 'check' },
+          { id: 'ti-base', name: 'Base: cart + 1 payment method (includes dynamic hosting: $10/mo)', price: 660, kind: 'check' },
           { id: 'ti-page', name: 'Additional page', price: 60, kind: 'qty' },
           {
             id: 'ti-catalog', name: 'Product catalog', kind: 'radio', options: [
@@ -178,23 +163,9 @@ var QUOTE_AREAS_EN = [
     tagline: 'Automatically responds to your customers, wherever they message you.',
     disabled: false,
     items: [
-      { id: 'web-bot', name: 'AI customer support chatbot (website)', price: 120, kind: 'check' },
+      { id: 'web-bot', name: 'AI customer support chatbot (website) (includes dynamic hosting: $10/mo)', price: 130, kind: 'check' },
       { id: 'wa-link', name: 'WhatsApp — direct button on your website', price: 25, kind: 'check' },
-      { id: 'wa-bot', name: 'WhatsApp — with automation/chatbot', kind: 'check', soon: true },
-      { id: 'ig-dm', name: 'Instagram DM with AI', kind: 'check', soon: true },
-      { id: 'fb-dm', name: 'Facebook Messenger with AI', kind: 'check', soon: true }
-    ]
-  },
-  {
-    id: 'analitica-reportes',
-    name: 'Analytics & Reports',
-    icon: 'bi-bar-chart',
-    tagline: "Understand your visitors and your site's performance.",
-    disabled: false,
-    items: [
-      { id: 'analytics-setup', name: 'Behavior analytics setup (heatmaps, traffic, own dashboard)', price: 60, kind: 'check' },
-      { id: 'reports-auto', name: 'Internal report automation', kind: 'check', soon: true },
-      { id: 'biz-dashboard', name: 'Business metrics dashboard', kind: 'check', soon: true }
+      { id: 'ig-dm', name: 'Instagram DM with AI', kind: 'check', soon: true }
     ]
   },
   {
@@ -227,11 +198,10 @@ var QUOTE_AREAS_EN = [
     id: 'marketing-contenido',
     name: 'Marketing & Content',
     icon: 'bi-stars',
-    tagline: 'Content and campaigns that keep your brand alive.',
-    disabled: true,
+    tagline: 'Monthly graphic pieces and content for your social media, made by a graphic designer.',
+    disabled: false,
     items: [
-      { id: 'email-seq', name: 'Email marketing (welcome sequence)', kind: 'check', soon: true },
-      { id: 'social-ai', name: 'AI-generated social content', kind: 'check', soon: true }
+      { id: 'social-content', name: 'Marketing & Content (social media graphic design)', kind: 'check', customQuote: true, range: '$100 – $200 / mo' }
     ]
   }
 ];
@@ -259,21 +229,19 @@ var translations = {
         trust_3: "Acompañamiento cercano",
         services_eyebrow: "Lo que hacemos",
         services_title: "Ingeniería y creatividad al servicio de tu negocio",
-        services_lead: "No solo construimos, pensamos primero en cómo tu negocio va a vender y atender mejor. Hoy ya ofrecemos 4 de estas áreas; las otras 2 vienen en camino.",
+        services_lead: "No solo construimos, pensamos primero en cómo tu negocio va a vender y atender mejor. Hoy ya ofrecemos 4 de estas áreas; la otra viene en camino.",
         svc_tag_live: "● Disponible ahora",
         svc_tag_soon: "Próximamente",
         svc_1_title: "Sitios Web",
         svc_1_desc: "Landing page, sitio corporativo o tienda en línea — diseñados para convertir visitas en clientes.",
         svc_2_title: "Atención al Cliente con IA",
         svc_2_desc: "Chat en tu sitio y WhatsApp respondiendo por ti las 24 horas, sin perder el trato humano.",
-        svc_3_title: "Analítica y Reportes",
-        svc_3_desc: "Entiende qué hace la gente en tu sitio: qué páginas visitan, en qué hacen clic, de dónde vienen.",
-        svc_4_title: "Apps, Sistemas y Paneles",
-        svc_4_desc: "Proyectos a la medida — apps móviles, sistemas propios, paneles administrativos — cotizados según tu necesidad.",
+        svc_3_title: "Apps, Sistemas y Paneles",
+        svc_3_desc: "Proyectos a la medida — apps móviles, sistemas propios, paneles administrativos — cotizados según tu necesidad.",
+        svc_4_title: "Marketing y Contenido",
+        svc_4_desc: "Piezas gráficas y contenido mensual para tus redes, creado por un diseñador gráfico.",
         svc_5_title: "Automatización de Ventas",
         svc_5_desc: "Seguimiento automático de tus prospectos para que ninguna oportunidad se enfríe ni se pierda.",
-        svc_6_title: "Marketing y Contenido con IA",
-        svc_6_desc: "Presencia constante en tus redes, sin que tengas que producir cada pieza tú mismo.",
         btn_view_pricing: "Ver precios y armar tu cotización",
         why_eyebrow: "Por qué LaColo",
         why_title: "Pensado en la persona del otro lado de la pantalla",
@@ -374,21 +342,19 @@ var translations = {
         trust_3: "Close support",
         services_eyebrow: "What we do",
         services_title: "Engineering and creativity for your business",
-        services_lead: "We don't just build — we think first about how your business will sell and serve better. Today we already offer 4 of these areas; the other 2 are on the way.",
+        services_lead: "We don't just build — we think first about how your business will sell and serve better. Today we already offer 4 of these areas; the other one is on the way.",
         svc_tag_live: "● Available now",
         svc_tag_soon: "Coming soon",
         svc_1_title: "Websites",
         svc_1_desc: "Landing page, corporate site, or online store — designed to convert visits into customers.",
         svc_2_title: "AI Customer Support",
         svc_2_desc: "Chat on your site and WhatsApp responding for you 24/7, without losing the human touch.",
-        svc_3_title: "Analytics & Reports",
-        svc_3_desc: "Understand what people do on your site: which pages they visit, what they click, where they come from.",
-        svc_4_title: "Apps, Systems & Dashboards",
-        svc_4_desc: "Custom projects — mobile apps, your own systems, admin panels — quoted to your needs.",
+        svc_3_title: "Apps, Systems & Dashboards",
+        svc_3_desc: "Custom projects — mobile apps, your own systems, admin panels — quoted to your needs.",
+        svc_4_title: "Marketing & Content",
+        svc_4_desc: "Monthly graphic pieces and content for your social media, made by a graphic designer.",
         svc_5_title: "Sales Automation",
         svc_5_desc: "Automatic follow-up for your leads so no opportunity goes cold or gets lost.",
-        svc_6_title: "Marketing & AI Content",
-        svc_6_desc: "Constant presence on your social media, without you having to produce every piece yourself.",
         btn_view_pricing: "See pricing and build your quote",
         why_eyebrow: "Why LaColo",
         why_title: "Designed with the person on the other side of the screen in mind",
