@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="site_title">LaColo Dev & Creative | Engineering & Design Excellence</title>
+    <title data-i18n="site_title">LaColo Dev & Creative | Excelencia en Ingeniería y Diseño</title>
 
     <script type="application/ld+json">
     {
@@ -13,7 +13,7 @@
       "name": "LaColo Dev & Creative",
       "description": "Servicios integrales de desarrollo web, ingeniería de software y producción creativa de audio y video.",
       "url": "https://lacolodev.com",
-      "telephone": "+503-7747-1010", 
+      "telephone": "+503-7747-1010",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Santa Tecla",
@@ -30,334 +30,465 @@
         { "@type": "City", "name": "Nuevo Cuscatlán" },
         { "@type": "City", "name": "San Salvador" },
         { "@type": "City", "name": "La Unión" },
-        { "@type": "City", "name": "San Miguel" },
-        { "@type": "State", "name": "Maryland", "addressRegion": "MD" },
-        { "@type": "City", "name": "North Potomac", "addressRegion": "MD" },
-        { "@type": "City", "name": "Potomac", "addressRegion": "MD" },
-        { "@type": "City", "name": "Washington DC" },
-        { "@type": "State", "name": "Virginia" }
+        { "@type": "City", "name": "San Miguel" }
       ],
       "publicAccess": false,
       "priceRange": "$$"
     }
     </script>
-   
+
     <link rel="icon" type="image/png" href="img/laColoDevs.png">
     <link rel="apple-touch-icon" href="img/laColoDevs.png">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/app.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="./img/laColoDevs.png" alt="Logo" class="logo-main me-2">
-                <span class="brand-text">LACOLO</span>
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#foundation" data-i18n="nav_projects">Proyectos</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav_subs">Suscripciones</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#impact" data-i18n="nav_impact">Impacto</a></li>
-                    <li class="nav-item mx-lg-3 p-2">
-                        <select id="languageSelector"
-                            class="form-select form-select-sm bg-transparent text-white border-secondary">
-                            <option value="en">EN</option>
-                            <option value="es" selected>ES</option>
-                        </select>
-                    </li>
-                    <li class="nav-item ms-lg-2 my-auto">
-                        <a href="#contact" class="btn btn-lacolo btn-sm w-100 fw-bold" data-i18n="btn_get_started">Get
-                            Started</a>
-                    </li>
-                </ul>
+    <nav>
+        <a href="#" class="lockup small">
+            <img class="lockup-icon" src="img/laColoDevs.png" alt="LaColo Dev">
+            <div class="lockup-col">
+                <span class="lockup-wordmark brand-titles">LACOLO</span>
             </div>
+        </a>
+        <div class="nav-links">
+            <a href="#servicios" data-i18n="nav_services">Servicios</a>
+            <a href="#precios" data-i18n="nav_pricing">Cotizar</a>
+            <a href="#faq" data-i18n="nav_faq">FAQ</a>
+            <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+        </div>
+        <div class="nav-actions">
+            <select id="languageSelector" class="lang-select">
+                <option value="en">EN</option>
+                <option value="es" selected>ES</option>
+            </select>
+            <a href="#contacto" class="nav-cta" data-i18n="nav_cta">Hablemos</a>
         </div>
     </nav>
 
-    <header class="hero py-5">
-        <div class="container text-center text-lg-start">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <h1 class="fw-bolder mb-4 responsive-title" data-i18n="hero_title">
-                        High-Performance
-                        <span class="d-sm-inline d-block">Web Development</span>
-                        with a <span class="text-rose">Creative Soul.</span>
-                    </h1>
+    <section class="hero">
+        <div class="parallax-blob parallax-blob-1"></div>
+        <div class="parallax-blob parallax-blob-2"></div>
 
-                    <p class="lead mb-5 opacity-75" data-i18n="hero_lead">
-                        Construimos experiencias digitales seguras, rápidas e impactantes. Potenciado por la ingeniería,
-                        protegido por Cloudflare e impulsado por el impacto social.
+        <div class="lockup large reveal-solo" style="margin: 0 auto 30px;">
+            <img class="lockup-icon" src="img/laColoDevs.png" alt="LaColo Dev">
+            <div class="lockup-col">
+                <span class="lockup-wordmark brand-titles">LACOLO</span>
+                <span class="lockup-tagline" data-i18n="hero_lockup_tag">Dev &amp; Creative</span>
+            </div>
+        </div>
+
+        <div class="hero-eyebrow reveal-solo" data-i18n="hero_eyebrow">Ingeniería + Creatividad</div>
+        <h1 class="reveal-solo" data-i18n="hero_title">Desarrollo web de alto rendimiento con un alma creativa.</h1>
+        <p class="sub reveal-solo" data-i18n="hero_lead">Construimos experiencias digitales seguras, rápidas e
+            impactantes. Potenciado por la ingeniería, protegido por Cloudflare e impulsado por el impacto social.</p>
+        <div class="hero-ctas reveal-solo">
+            <a href="#precios" class="btn-primary" data-i18n="btn_build">Cotizar mi Proyecto</a>
+            <a href="#contacto" class="btn-ghost" data-i18n="btn_consultation">Consultoría Gratis</a>
+        </div>
+    </section>
+
+    <div class="trust">
+        <div class="trust-item"><div class="num">100%</div><div class="lbl" data-i18n="trust_1">Código a la
+                medida</div></div>
+        <div class="trust-item"><div class="num"><i class="bi bi-shield-check"></i></div><div class="lbl"
+                data-i18n="trust_2">Protegido con Cloudflare</div></div>
+        <div class="trust-item"><div class="num">1:1</div><div class="lbl" data-i18n="trust_3">Acompañamiento
+                cercano</div></div>
+    </div>
+
+    <section id="servicios">
+        <div class="section-head">
+            <div class="section-eyebrow" data-i18n="services_eyebrow">Lo que hacemos</div>
+            <h2 data-i18n="services_title">Ingeniería y creatividad al servicio de tu negocio</h2>
+            <p data-i18n="services_lead">No solo construimos, pensamos primero en cómo tu negocio va a vender y
+                atender mejor. Hoy ya ofrecemos 4 de estas áreas; las otras 2 vienen en camino.</p>
+        </div>
+        <div class="services-grid reveal-group">
+            <div class="svc-card reveal">
+                <span class="svc-tag live" data-i18n="svc_tag_live">● Disponible ahora</span>
+                <div class="svc-icon"><i class="bi bi-globe2"></i></div>
+                <h3 data-i18n="svc_1_title">Sitios Web</h3>
+                <p data-i18n="svc_1_desc">Landing page, sitio corporativo o tienda en línea — diseñados para
+                    convertir visitas en clientes.</p>
+            </div>
+            <div class="svc-card reveal">
+                <span class="svc-tag live" data-i18n="svc_tag_live">● Disponible ahora</span>
+                <div class="svc-icon"><i class="bi bi-chat-dots"></i></div>
+                <h3 data-i18n="svc_2_title">Atención al Cliente con IA</h3>
+                <p data-i18n="svc_2_desc">Chat en tu sitio y WhatsApp respondiendo por ti las 24 horas, sin perder el
+                    trato humano.</p>
+            </div>
+            <div class="svc-card reveal">
+                <span class="svc-tag live" data-i18n="svc_tag_live">● Disponible ahora</span>
+                <div class="svc-icon"><i class="bi bi-bar-chart"></i></div>
+                <h3 data-i18n="svc_3_title">Analítica y Reportes</h3>
+                <p data-i18n="svc_3_desc">Entiende qué hace la gente en tu sitio: qué páginas visitan, en qué hacen
+                    clic, de dónde vienen.</p>
+            </div>
+            <div class="svc-card reveal">
+                <span class="svc-tag live" data-i18n="svc_tag_live">● Disponible ahora</span>
+                <div class="svc-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+                <h3 data-i18n="svc_4_title">Apps, Sistemas y Paneles</h3>
+                <p data-i18n="svc_4_desc">Proyectos a la medida — apps móviles, sistemas propios, paneles
+                    administrativos — cotizados según tu necesidad.</p>
+            </div>
+            <div class="svc-card soon reveal">
+                <span class="svc-tag soon" data-i18n="svc_tag_soon">Próximamente</span>
+                <div class="svc-icon"><i class="bi bi-bullseye"></i></div>
+                <h3 data-i18n="svc_5_title">Automatización de Ventas</h3>
+                <p data-i18n="svc_5_desc">Seguimiento automático de tus prospectos para que ninguna oportunidad se
+                    enfríe ni se pierda.</p>
+            </div>
+            <div class="svc-card soon reveal">
+                <span class="svc-tag soon" data-i18n="svc_tag_soon">Próximamente</span>
+                <div class="svc-icon"><i class="bi bi-stars"></i></div>
+                <h3 data-i18n="svc_6_title">Marketing y Contenido con IA</h3>
+                <p data-i18n="svc_6_desc">Presencia constante en tus redes, sin que tengas que producir cada pieza tú
+                    mismo.</p>
+            </div>
+        </div>
+        <div class="services-cta reveal-solo">
+            <a href="#precios" class="btn-primary" data-i18n="btn_view_pricing">Ver precios y armar tu cotización</a>
+        </div>
+    </section>
+
+    <section class="why">
+        <div class="section-head">
+            <div class="section-eyebrow" data-i18n="why_eyebrow">Por qué LaColo</div>
+            <h2 data-i18n="why_title">Pensado en la persona del otro lado de la pantalla</h2>
+        </div>
+        <div class="why-grid reveal-group">
+            <div class="why-item reveal">
+                <div class="why-icon"><i class="bi bi-compass"></i></div>
+                <h3 data-i18n="why_1_title">Estrategia antes que tecnología</h3>
+                <p data-i18n="why_1_desc">Empezamos entendiendo tu negocio y a tus clientes, no vendiéndote una
+                    herramienta genérica.</p>
+            </div>
+            <div class="why-item reveal">
+                <div class="why-icon"><i class="bi bi-heart"></i></div>
+                <h3 data-i18n="why_2_title">Honestidad y excelencia</h3>
+                <p data-i18n="why_2_desc">Mi trabajo se guía por la honestidad; no solo contrato servicios técnicos,
+                    me asocio con tu negocio.</p>
+            </div>
+            <div class="why-item reveal">
+                <div class="why-icon"><i class="bi bi-globe-americas"></i></div>
+                <h3 data-i18n="why_3_title">Cercano y con alcance global</h3>
+                <p data-i18n="why_3_desc">Con base en El Salvador, comunicación directa y honesta en cada paso del
+                    proyecto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios">
+        <div class="section-head reveal-solo">
+            <div class="section-eyebrow" data-i18n="testi_eyebrow">Lo que dicen</div>
+            <h2 data-i18n="testi_title">Confianza que se construye entregando</h2>
+            <p data-i18n="testi_lead">Espacio de ejemplo — aquí irán los testimonios reales de tus clientes a medida
+                que los vayas consiguiendo.</p>
+        </div>
+        <div class="testi-wrap reveal-solo">
+            <div class="testi-viewport">
+                <div class="testi-track">
+                    <div class="testi-slide">
+                        <p class="testi-quote" data-i18n="testi_1_quote">"LaColo nos entregó el sitio antes de lo
+                            prometido y el soporte mensual nos ha quitado un problema de encima."</p>
+                        <div class="testi-name">Marcela Hernández</div>
+                        <div class="testi-role" data-i18n="testi_1_role">Dueña, Repostería Dulce Trigo</div>
+                    </div>
+                    <div class="testi-slide">
+                        <p class="testi-quote" data-i18n="testi_2_quote">"Se nota la mezcla entre lo técnico y lo
+                            creativo. El sitio se ve profesional y carga muy rápido."</p>
+                        <div class="testi-name">Ricardo Alas</div>
+                        <div class="testi-role" data-i18n="testi_2_role">Gerente, Clínica Dental Sonrisas</div>
+                    </div>
+                    <div class="testi-slide">
+                        <p class="testi-quote" data-i18n="testi_3_quote">"El acompañamiento fue cercano en todo el
+                            proceso. Primero entendieron el negocio y después construyeron."</p>
+                        <div class="testi-name">Daniela Guzmán</div>
+                        <div class="testi-role" data-i18n="testi_3_role">Fundadora, Estudio Fit Daniela</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-nav">
+                <button class="testi-arrow testi-prev" aria-label="Anterior">←</button>
+                <div class="testi-dots"></div>
+                <button class="testi-arrow testi-next" aria-label="Siguiente">→</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="why" id="precios" style="background:var(--ink);">
+        <div class="section-head reveal-solo">
+            <div class="section-eyebrow" data-i18n="quote_eyebrow">Cotiza tu proyecto</div>
+            <h2 data-i18n="quote_title">Arma tu propuesta a tu medida</h2>
+            <p data-i18n="quote_lead">Elige lo que tu negocio necesita y mira el estimado en tiempo real. Al final,
+                nos escribes por WhatsApp y afinamos los detalles juntos.</p>
+        </div>
+
+        <div class="quote-chat-cta reveal-solo">
+            <div>
+                <strong data-i18n="quote_chat_title">¿No sabes qué elegir?</strong>
+                <p data-i18n="quote_chat_lead">Escríbenos por WhatsApp y te recomendamos lo ideal para tu negocio.</p>
+            </div>
+            <button type="button" class="btn-ghost" id="quote-open-chat" data-i18n="quote_chat_btn">Hablar por
+                WhatsApp</button>
+        </div>
+
+        <div class="quote-layout">
+            <div>
+                <div class="quote-areas" id="quote-areas"></div>
+            </div>
+            <aside class="quote-summary">
+                <div class="quote-summary-inner">
+                    <div class="quote-summary-label" data-i18n="quote_total_label">Total estimado</div>
+                    <div class="quote-summary-total" id="quote-total">$0</div>
+                    <div class="quote-summary-note" id="quote-note"></div>
+                    <ul class="quote-summary-list" id="quote-summary-list">
+                        <li class="empty" data-i18n="quote_empty">Aún no has elegido nada.</li>
+                    </ul>
+                    <button type="button" class="btn-primary" id="quote-submit-btn" style="width:100%;" disabled
+                        data-i18n="quote_submit">Enviar mi solicitud</button>
+                </div>
+            </aside>
+        </div>
+
+        <div class="quote-mobile-bar">
+            <div>
+                <div class="quote-mobile-total" id="quote-mobile-total">$0</div>
+                <div class="quote-mobile-label" data-i18n="quote_total_label">Total estimado</div>
+            </div>
+            <button type="button" class="btn-primary" id="quote-submit-btn-mobile" disabled
+                data-i18n="quote_submit_mobile">Enviar solicitud</button>
+        </div>
+    </section>
+
+    <!-- Modal de cotización -> WhatsApp -->
+    <div class="auth-modal" id="quote-modal">
+        <div class="auth-modal-box" style="max-width:420px;">
+            <button class="auth-modal-close" id="quote-modal-close" type="button">×</button>
+            <h3 data-i18n="quote_modal_title">Casi listo — cuéntanos cómo contactarte</h3>
+            <form id="quote-form">
+                <label for="quote-nombre" data-i18n="form_name_label">Nombre</label>
+                <input type="text" id="quote-nombre" autocomplete="name" required>
+
+                <label for="quote-empresa" data-i18n="form_company_label">Empresa o marca personal <span
+                        style="font-weight:400; text-transform:none; color:var(--pale-dim);"
+                        data-i18n="form_optional">(opcional)</span></label>
+                <input type="text" id="quote-empresa" autocomplete="organization">
+
+                <button class="btn-primary" id="quote-form-submit" style="width:100%; margin-top:18px;"
+                    type="submit" data-i18n="quote_modal_submit">Enviar por WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="proceso">
+        <div class="section-head">
+            <div class="section-eyebrow" data-i18n="process_eyebrow">Cómo trabajamos</div>
+            <h2 data-i18n="process_title">De la idea a tu sitio funcionando</h2>
+        </div>
+        <div class="process-steps reveal-group">
+            <div class="step reveal">
+                <div class="step-num">01</div>
+                <div>
+                    <h3 data-i18n="step_1_title">Conversamos sobre tu negocio</h3>
+                    <p data-i18n="step_1_desc">Entendemos qué necesitas, quiénes son tus clientes y qué te está
+                        costando tiempo o ventas hoy.</p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">02</div>
+                <div>
+                    <h3 data-i18n="step_2_title">Armamos tu cotización</h3>
+                    <p data-i18n="step_2_desc">Usas el configurador de precios o hablamos directo por WhatsApp para
+                        definir el alcance exacto.</p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">03</div>
+                <div>
+                    <h3 data-i18n="step_3_title">Diseñamos y construimos</h3>
+                    <p data-i18n="step_3_desc">Te mostramos avances antes de dar por definitivo cualquier elemento
+                        visual o técnico.</p>
+                </div>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">04</div>
+                <div>
+                    <h3 data-i18n="step_4_title">Lanzamos y te acompañamos</h3>
+                    <p data-i18n="step_4_desc">Publicamos tu sitio y seguimos cerca en las primeras semanas de uso.
                     </p>
-
-                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-                        <a href="#foundation" class="btn btn-lacolo px-4 py-2" data-i18n="btn_build">
-                            Build My Digital Home
-                        </a>
-                        <a href="#contact" class="btn btn-outline-dark px-4 py-2 fw-bold" data-i18n="btn_consultation">
-                            Free Consultation
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 p-5 d-lg-block text-center">
-                    <img src="./img/laColoDevs.png" alt="Logo" class="img-fluid mx-2 mt-4">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="foundation" class="section-padding bg-white">
-        <div class="container">
-            <h2 class="section-title text-center" data-i18n="foundation_title">The Foundation <br><small
-                    class="fs-6 opacity-50" data-i18n="foundation_subtitle">Proyectos de Pago Único</small></h2>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-5">
-                    <div class="card h-100 card-pricing p-4">
-                        <div class="card-body text-center">
-                            <h3 class="h5 mb-3" data-i18n="card_custom_title">Custom Web Launch</h3>
-                            <h4 class="display-6 fw-bold mb-4">$1,500 - $2,500</h4>
-                            <ul class="list-unstyled text-start mb-5 small">
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_custom_1">Hasta 8 secciones personalizadas</span></li>
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_custom_2">Arquitectura móvil (Bootstrap)</span></li>
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_custom_3">Optimización de velocidad</span></li>
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_custom_4">Configuración en Cloudflare</span></li>
-                                <li class="mb-2"><i class="bi bi-shield-check text-rose me-2"></i><span
-                                        data-i18n="feat_custom_5">Certificado SSL de por vida</span></li>
-                            </ul>
-                            <a href="#contact" class="btn btn-outline-dark w-100 fw-bold"
-                                data-i18n="btn_request_project">Solicitar Proyecto</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="card h-100 card-pricing p-4">
-                        <div class="card-body text-center">
-                            <h3 class="h5 mb-3" data-i18n="card_landing_title">Landing Page Pro</h3>
-                            <h4 class="display-6 fw-bold mb-4">$600 - $900</h4>
-                            <ul class="list-unstyled text-start mb-5 small">
-                                <li class="mb-2">
-                                    <i class="bi bi-check2 text-rose me-2"></i>
-                                    <span data-i18n="feat_landing_1">Una página de alta conversión</span>
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check2 text-rose me-2"></i>
-                                    <span data-i18n="feat_landing_2">Diseño enfocado en ventas/leads</span>
-                                </li>
-                                <li class="mb-2"> <i class="bi bi-check2 text-rose me-2"></i>
-                                    <span data-i18n="feat_landing_3">Integración de formularios</span>
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check2 text-rose me-2"></i>
-                                    <span data-i18n="feat_landing_4">Auditoría de seguridad inicial</span>
-                                </li>
-                            </ul>
-                            <a href="#contact" class="btn btn-outline-dark w-100 fw-bold"
-                                data-i18n="btn_request_landing">Solicitar Landing</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="section-padding" style="background-color: var(--pearl-white);">
-        <div class="container">
-            <h2 class="section-title text-center" data-i18n="services_title">The Peace of Mind <br><small
-                    class="fs-6 opacity-50" data-i18n="services_subtitle">Modelos de Suscripción</small></h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 card-pricing p-4">
-                        <div class="card-body">
-                            <h3 class="h5 mb-3" data-i18n="card_sentinel_title">Web Sentinel</h3>
-                            <h4 class="h3 fw-bold mb-4 text-center">$75 - $95 <small class="fs-6 opacity-50">/mo</small>
-                            </h4>
-                            <p class="small mb-4" data-i18n="card_sentinel_desc">Ideal para que su web "siempre
-                                funcione".</p>
-                            <ul class="list-unstyled small mb-5">
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_sentinel_1">Hosting & DNS Cloudflare</span></li>
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_sentinel_2">Copias de seguridad mensuales</span></li>
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_sentinel_3">1h de cambios técnicos</span></li>
-                            </ul>
-                            <div class="bg-light p-2 text-center mb-3">
-                                <span class="small fw-bold" data-i18n="church_promo">Iglesias: $60/mo</span>
-                            </div>
-                            <a href="#contact" class="btn btn-outline-dark w-100"
-                                data-i18n="btn_subscribe">Suscribirse</a>
-                        </div>
-                    </div>
+    <section id="faq">
+        <div class="section-head reveal-solo">
+            <div class="section-eyebrow" data-i18n="faq_eyebrow">Preguntas frecuentes</div>
+            <h2 data-i18n="faq_title">Antes de que preguntes</h2>
+        </div>
+        <div class="faq-wrap reveal-group">
+            <div class="faq-item reveal open">
+                <button class="faq-q"><span data-i18n="faq_1_q">¿Cuánto tarda en estar listo mi sitio web?</span><span></span></button>
+                <div class="faq-a">
+                    <p data-i18n="faq_1_a">Depende del alcance, pero una landing page suele estar lista en 1-2
+                        semanas desde que definimos el contenido y el diseño contigo.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 card-pricing featured p-4"
-                        style="border-color: var(--rose-gold); border-width: 2px;">
-                        <div class="card-body">
-                            <span class="badge bg-dark mb-2" data-i18n="badge_popular">MOST POPULAR</span>
-                            <h3 class="h5 mb-3" data-i18n="card_pulse_title">Digital Pulse</h3>
-                            <h4 class="h3 fw-bold mb-4 text-center">$250 - $350 <small
-                                    class="fs-6 opacity-50">/mo</small></h4>
-                            <p class="small mb-4" data-i18n="card_pulse_desc">Web + Contenido para nuevos clientes.</p>
-                            <ul class="list-unstyled small mb-5">
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_pulse_1">Todo en Web Sentinel</span></li>
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_pulse_2">4 piezas gráficas RRSS</span></li>
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_pulse_3">2 actualizaciones de contenido</span></li>
-                            </ul>
-                            <a href="#contact" class="btn btn-lacolo w-100" data-i18n="btn_subscribe">Suscribirse</a>
-                        </div>
-                    </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-q"><span data-i18n="faq_2_q">¿Qué pasa si quiero cambios después del
+                        lanzamiento?</span><span></span></button>
+                <div class="faq-a">
+                    <p data-i18n="faq_2_a">Cada proyecto de sitio web incluye 2 rondas de cambios/revisiones antes
+                        del lanzamiento (puedes agregar rondas adicionales por $25 c/u desde el mismo configurador de
+                        precios). Una vez lanzado tu proyecto, cualquier cambio o ajuste nuevo se cotiza según el
+                        caso — no manejamos un plan mensual fijo. Usamos una tarifa por hora según la complejidad
+                        (desde $10/hora para ajustes simples, hasta $30/hora para trabajo que involucra IA real), así
+                        que solo pagas por el trabajo real que necesitas, cuando lo necesitas.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 card-pricing p-4 bg-dark text-white">
-                        <div class="card-body">
-                            <h3 class="h5 mb-3 text-rose" data-i18n="card_visionary_title">Visionary</h3>
-                            <h4 class="h3 fw-bold mb-4 text-center">$600 - $850 <small
-                                    class="fs-6 opacity-50">/mo</small></h4>
-                            <p class="small mb-4 opacity-75" data-i18n="card_visionary_desc">Full Audiovisual & Tech
-                                para destacar.</p>
-                            <ul class="list-unstyled small mb-5">
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_visionary_1">Todo lo anterior</span></li>
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_visionary_2">1 Video Reel (60s) mensual</span></li>
-                                <li class="mb-2"><i class="bi bi-check2 text-rose me-2"></i><span
-                                        data-i18n="feat_visionary_3">Optimización SEO constante</span></li>
-                            </ul>
-                            <a href="#contact" class="btn btn-outline-light w-100"
-                                data-i18n="btn_subscribe">Suscribirse</a>
-                        </div>
-                    </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-q"><span data-i18n="faq_3_q">¿Necesito saber de tecnología para trabajar
+                        contigo?</span><span></span></button>
+                <div class="faq-a">
+                    <p data-i18n="faq_3_a">No. Yo me encargo de toda la parte técnica; tú solo me cuentas cómo
+                        funciona tu negocio y qué quieres lograr.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
+                <button class="faq-q"><span data-i18n="faq_4_q">¿Qué pasa después de enviar mi
+                        cotización?</span><span></span></button>
+                <div class="faq-a">
+                    <p data-i18n="faq_4_a">Tu selección se envía por WhatsApp directamente a mí. Te respondo para
+                        afinar detalles, resolver dudas y confirmar el alcance final antes de arrancar.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="impact" class="impact section-padding">
-        <div class="container text-center">
-            <h2 class="section-title text-rose center-title mx-auto" data-i18n="impact_title">More Than Just Code: Our
-                Social Mission</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <p class="lead mb-4" data-i18n="impact_lead">En LaColo, creemos que la tecnología debe ser una
-                        fuerza para el bien.</p>
-                    <p class="opacity-75 mb-5" data-i18n="impact_text">Un porcentaje de cada proyecto se destina
-                        directamente a financiar proyectos de arte urbano para jóvenes en El Salvador...</p>
+    <section>
+        <div class="cta-band">
+            <h2 data-i18n="cta_title">Tu negocio merece un sitio que trabaje mientras tú descansas.</h2>
+            <p data-i18n="cta_lead">Cuéntanos sobre tu negocio y te mostramos cómo se vería tu sitio.</p>
+            <a href="#contacto" class="btn-dark" data-i18n="cta_btn">Empezar ahora</a>
+        </div>
+    </section>
+
+    <section id="impacto" class="why">
+        <div class="section-head reveal-solo">
+            <div class="section-eyebrow" data-i18n="impact_eyebrow">Más que código</div>
+            <h2 data-i18n="impact_title">Nuestra Misión Social</h2>
+        </div>
+        <div class="impact-wrap reveal-solo">
+            <p data-i18n="impact_lead">En LaColo, creemos que la tecnología debe ser una fuerza para el bien.</p>
+            <p data-i18n="impact_text">Un porcentaje de cada proyecto se destina directamente a financiar proyectos
+                de arte urbano para jóvenes en El Salvador.</p>
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <div class="section-head">
+            <div class="section-eyebrow" data-i18n="about_eyebrow">Sobre mí</div>
+            <h2 data-i18n="about_title">Ingeniería precisa. Visión creativa. Con propósito.</h2>
+        </div>
+        <div class="about-grid reveal-group">
+            <div class="about-photo reveal">
+                <img src="img/fundador.png" alt="Alejandro Colop">
+            </div>
+            <div class="about-text reveal">
+                <h3 data-i18n="about_subtitle">La intersección entre tecnología y narrativa</h3>
+                <p data-i18n="about_p1">Como estudiante de 4to año de Ingeniería en Desarrollo de Software (ITCA),
+                    Licenciado en Comunicación Social (UCA) y Técnico en Electrónica (INTI), uno la lógica rigurosa
+                    del código con la narrativa estratégica.</p>
+                <p data-i18n="about_p2">Mi trabajo como cristiano se guía por la honestidad y la excelencia. No solo
+                    contrato servicios técnicos; me asocio con su negocio para asegurar que su ecosistema digital
+                    comunique su esencia con integridad.</p>
+                <p class="about-location" data-i18n="about_location">Con base en El Salvador | Sirviendo globalmente
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="section-head reveal-solo">
+            <div class="section-eyebrow" data-i18n="contact_eyebrow">Hablemos</div>
+            <h2 data-i18n="contact_title">Escríbenos por el canal que prefieras</h2>
+            <p data-i18n="contact_lead">Respondemos rápido y sin rodeos. Cuéntanos qué necesita tu negocio.</p>
+        </div>
+        <div class="contact-grid reveal-solo">
+            <form class="contact-form" id="contact-form">
+                <label for="cf-name" data-i18n="form_name_label">Nombre</label>
+                <input type="text" id="cf-name" name="name" data-i18n="form_name_placeholder"
+                    placeholder="Tu nombre" required>
+                <label for="cf-msg" data-i18n="form_msg_label">Cuéntanos sobre tu negocio</label>
+                <textarea id="cf-msg" name="message" data-i18n="form_msg_placeholder"
+                    placeholder="¿Cómo podemos elevar su presencia digital?" required></textarea>
+                <button type="submit" class="contact-submit" data-i18n="btn_send_whatsapp">Enviar por
+                    WhatsApp</button>
+            </form>
+            <div class="contact-side-card">
+                <h3 data-i18n="contact_hablemos">Contacto directo</h3>
+                <a href="https://wa.me/+50377471010" class="wa-link">
+                    <i class="bi bi-whatsapp"></i> +503 7747-1010
+                </a>
+                <p class="note" data-i18n="contact_sub">Atención directa para proyectos de desarrollo y creativos.</p>
+                <div class="social-grid" style="display:flex; gap:14px; margin-top:24px;">
+                    <a href="https://wa.me/+50377471010" class="social-pill wa" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section-padding bg-white">
-        <div class="container">
-            <h2 class="section-title text-center" data-i18n="about_title">Engineering Precision. Creative Vision.
-                Purpose-Driven.</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0 text-center">
-                    <div class="p-5 border border-light shadow-sm">
-                        <img src="./img/fundador.png" alt="Alejandro Colop" class="img-fluid rounded-circle">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="h4 brand-titles mb-4" data-i18n="about_subtitle">The Intersection of Tech and
-                        Storytelling</h3>
+    <button class="chat-toggle-btn" id="chat-toggle-btn" type="button" aria-label="Abrir chat de WhatsApp">
+        <i class="bi bi-whatsapp icon-chat"></i>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+    </button>
 
-                    <p class="mb-4" data-i18n="about_p1">
-                        Como estudiante de 4to año de Ingeniería en Desarrollo de Software (ITCA),
-                        Licenciado en Comunicación Social (UCA) y Técnico en Electrónica (INTI),
-                        uno la lógica rigurosa del código con la narrativa estratégica.
-                    </p>
-
-                    <p class="mb-4 opacity-75" data-i18n="about_p2">
-                        Mi trabajo como cristiano se guía por la honestidad y la excelencia. No
-                        solo contrato servicios técnicos; me asocio con su negocio para asegurar
-                        que su ecosistema digital comunique su esencia con integridad.
-                    </p>
-
-                    <p class="small text-rose fw-bold" data-i18n="about_location">
-                        Proudly Based in El Salvador | Serving Globally
-                    </p>
-                </div>
+    <div class="chat-panel" id="chat-panel">
+        <div class="chat-header">
+            <div class="chat-header-icon"><i class="bi bi-whatsapp"></i></div>
+            <div class="chat-header-text">
+                <h4 data-i18n="chat_header_title">Asistente LaColo</h4>
+                <p data-i18n="chat_header_sub">Escríbenos y te respondemos rápido</p>
             </div>
         </div>
-    </section>
-
-    <section id="contact" class="section-padding" style="background-color: var(--pearl-white);">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 shadow-lg p-0 overflow-hidden" style="border-top: 5px solid var(--rose-gold);">
-                    <div class="row g-0">
-                        <div class="col-md-5 bg-dark text-white p-5 d-flex flex-column justify-content-center">
-                            <h2 class="brand-titles text-rose mb-4" data-i18n="contact_hablemos">Hablemos</h2>
-                            <p class="small mb-2">
-                                <a href="https://wa.me/+50377471010" class="text-white text-decoration-none">
-                                    <i class="bi bi-whatsapp me-2"></i>+503 7747-1010
-                                </a>
-                            </p>
-                            <p class="small opacity-50" data-i18n="contact_sub">Atención directa para proyectos de
-                                desarrollo y creativos.</p>
-                        </div>
-                        <div class="col-md-7 p-5 bg-white">
-                            <form id="whatsappForm" onsubmit="enviarAWhatsApp(event)">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <input type="text" id="name" class="form-control rounded-0"
-                                            data-i18n="form_name" placeholder="Nombre" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="email" id="email" class="form-control rounded-0"
-                                            data-i18n="form_email" placeholder="Correo (opcional)">
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea id="message" rows="4" class="form-control rounded-0"
-                                            data-i18n="form_msg"
-                                            placeholder="¿Cómo podemos elevar su presencia digital?"
-                                            required></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-lacolo w-100">
-                                            <i class="bi bi-whatsapp me-2"></i><span
-                                                data-i18n="btn_send_whatsapp">Enviar vía WhatsApp</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="chat-msg bot" data-i18n="chat_greeting">¡Hola! Gracias por visitarnos. Escríbenos por
+                WhatsApp y con gusto te ayudamos con tu proyecto.</div>
         </div>
-    </section>
+        <div class="chat-wa-row">
+            <a href="#" id="chat-wa-link" class="btn-primary chat-wa-btn" target="_blank" rel="noopener">
+                <i class="bi bi-whatsapp"></i> <span data-i18n="chat_wa_btn">Chatear por WhatsApp</span>
+            </a>
+        </div>
+    </div>
 
     <footer>
-        <div class="container text-center py-4">
-            <h2 class="brand-titles text-rose mb-4">LACOLO</h2>
-            <p class="small opacity-50 mb-0" data-i18n="footer_copy">&copy; 2026 LaColo Dev & Creative. Based in El
-                Salvador 🇸🇻</p>
+        <div class="lockup medium footer-lockup" style="margin: 0 auto 24px; justify-content:center;">
+            <img class="lockup-icon" src="img/laColoDevs.png" alt="LaColo Dev">
+            <div class="lockup-col">
+                <span class="lockup-wordmark brand-titles">LACOLO</span>
+            </div>
         </div>
+        <p data-i18n="footer_copy">&copy; 2026 LaColo Dev & Creative. Con base en El Salvador 🇸🇻</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="JS/app.js"></script>
 </body>
 
 </html>
