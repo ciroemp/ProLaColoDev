@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="site_title">LaColo Dev & Creative | Excelencia en Ingeniería y Diseño</title>
+    <title data-i18n="site_title">LaColo Dev & Creative | Tu sitio web, sin pagar de más</title>
+    <meta name="description" content="Sitios web a la medida sin pago mensual de servidor, WordPress y tiendas en línea con WooCommerce. Te recomiendo lo que tu negocio realmente necesita. Con base en El Salvador.">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "LaColo Dev & Creative",
-      "description": "Servicios integrales de desarrollo web, ingeniería de software y producción creativa de audio y video.",
+      "description": "Sitios web a la medida, WordPress, tiendas en línea con WooCommerce y diseño gráfico para emprendedores.",
       "url": "https://lacolodev.com",
       "telephone": "+503-7747-1010",
       "address": {
@@ -58,16 +59,16 @@
         </a>
         <div class="nav-links">
             <a href="#servicios" data-i18n="nav_services">Servicios</a>
-            <a href="#precios" data-i18n="nav_pricing">Cotizar</a>
+            <a href="#comparar" data-i18n="nav_compare">¿Cuál me conviene?</a>
+            <a href="#paquetes" data-i18n="nav_packages">Paquetes</a>
             <a href="#faq" data-i18n="nav_faq">FAQ</a>
-            <a href="#contacto" data-i18n="nav_contact">Contacto</a>
         </div>
         <div class="nav-actions">
-            <select id="languageSelector" class="lang-select">
+            <select id="languageSelector" class="lang-select" aria-label="Idioma">
                 <option value="en">EN</option>
                 <option value="es" selected>ES</option>
             </select>
-            <a href="#contacto" class="nav-cta" data-i18n="nav_cta">Hablemos</a>
+            <a href="cotizar.html" class="nav-cta" data-i18n="nav_cta">Cotizar</a>
         </div>
     </nav>
 
@@ -83,19 +84,21 @@
             </div>
         </div>
 
-        <div class="hero-eyebrow reveal-solo" data-i18n="hero_eyebrow">Ingeniería + Creatividad</div>
-        <h1 class="reveal-solo" data-i18n="hero_title">Desarrollo web de alto rendimiento con un alma creativa.</h1>
-        <p class="sub reveal-solo" data-i18n="hero_lead">Construimos experiencias digitales seguras, rápidas e
-            impactantes. Potenciado por la ingeniería, protegido por Cloudflare e impulsado por el impacto social.</p>
+        <div class="hero-eyebrow reveal-solo" data-i18n="hero_eyebrow">Desarrollo web + Diseño</div>
+        <h1 class="reveal-solo" data-i18n="hero_title">Tu sitio web, sin pagar de más.</h1>
+        <p class="sub reveal-solo" data-i18n="hero_lead">Te recomiendo la solución que tu negocio realmente necesita: un
+            sitio a la medida, rápido y sin pago mensual de servidor, o WordPress cuando sí te conviene. Yo me encargo de
+            toda la parte técnica para que tú te enfoques en tu negocio.</p>
         <div class="hero-ctas reveal-solo">
-            <a href="#precios" class="btn-primary" data-i18n="btn_build">Cotizar mi Proyecto</a>
-            <a href="#contacto" class="btn-ghost" data-i18n="btn_consultation">Consultoría Gratis</a>
+            <a href="#paquetes" class="btn-primary" data-i18n="btn_packages">Ver paquetes</a>
+            <a href="#" class="btn-ghost" data-wa="wa_msg_general" target="_blank" rel="noopener"><i
+                    class="bi bi-whatsapp"></i> <span data-i18n="btn_whatsapp">Escribir por WhatsApp</span></a>
         </div>
     </section>
 
     <div class="trust">
-        <div class="trust-item"><div class="num">100%</div><div class="lbl" data-i18n="trust_1">Código a la
-                medida</div></div>
+        <div class="trust-item"><div class="num">$0</div><div class="lbl" data-i18n="trust_1">Servidor mensual en
+                sitios a la medida</div></div>
         <div class="trust-item"><div class="num"><i class="bi bi-shield-check"></i></div><div class="lbl"
                 data-i18n="trust_2">Protegido con Cloudflare</div></div>
         <div class="trust-item"><div class="num">1:1</div><div class="lbl" data-i18n="trust_3">Acompañamiento
@@ -105,49 +108,174 @@
     <section id="servicios">
         <div class="section-head">
             <div class="section-eyebrow" data-i18n="services_eyebrow">Lo que hacemos</div>
-            <h2 data-i18n="services_title">Ingeniería y creatividad al servicio de tu negocio</h2>
-            <p data-i18n="services_lead">No solo construimos, pensamos primero en cómo tu negocio va a vender y
-                atender mejor. Hoy ya ofrecemos 4 de estas áreas; la otra viene en camino.</p>
+            <h2 data-i18n="services_title">Lo justo para tu negocio</h2>
+            <p data-i18n="services_lead">Trabajo con HTML, CSS, JavaScript y PHP, y también con WordPress. Por eso puedo
+                recomendarte lo que de verdad te conviene, no lo único que sé hacer.</p>
         </div>
-        <div class="services-grid reveal-group">
+        <div class="services-grid four reveal-group">
             <div class="svc-card reveal">
-                <span class="svc-tag live" data-i18n="svc_tag_live">● Disponible ahora</span>
-                <div class="svc-icon"><i class="bi bi-globe2"></i></div>
-                <h3 data-i18n="svc_1_title">Sitios Web</h3>
-                <p data-i18n="svc_1_desc">Landing page, sitio corporativo o tienda en línea — diseñados para
-                    convertir visitas en clientes.</p>
+                <div class="svc-icon"><i class="bi bi-lightning-charge"></i></div>
+                <h3 data-i18n="svc_1_title">Sitios a la medida</h3>
+                <p data-i18n="svc_1_desc">Landing pages y sitios corporativos rápidos y seguros, sin pago mensual de
+                    servidor. Ideales si tu sitio muestra tu negocio y tus clientes te contactan por WhatsApp.</p>
             </div>
             <div class="svc-card reveal">
-                <span class="svc-tag live" data-i18n="svc_tag_live">● Disponible ahora</span>
-                <div class="svc-icon"><i class="bi bi-chat-dots"></i></div>
-                <h3 data-i18n="svc_2_title">Atención al Cliente con IA</h3>
-                <p data-i18n="svc_2_desc">Chat en tu sitio y WhatsApp respondiendo por ti las 24 horas, sin perder el
-                    trato humano.</p>
+                <div class="svc-icon"><i class="bi bi-bag-check"></i></div>
+                <h3 data-i18n="svc_2_title">WordPress y tiendas en línea</h3>
+                <p data-i18n="svc_2_desc">Creo tu sitio o tienda con WooCommerce y dejo todo configurado: productos,
+                    pagos o contra entrega, envíos, dominio, correo y conexiones con WhatsApp, Google y Meta.</p>
             </div>
             <div class="svc-card reveal">
-                <span class="svc-tag live" data-i18n="svc_tag_live">● Disponible ahora</span>
-                <div class="svc-icon"><i class="bi bi-grid-3x3-gap"></i></div>
-                <h3 data-i18n="svc_3_title">Apps, Sistemas y Paneles</h3>
-                <p data-i18n="svc_3_desc">Proyectos a la medida — apps móviles, sistemas propios, paneles
-                    administrativos — cotizados según tu necesidad.</p>
+                <div class="svc-icon"><i class="bi bi-tools"></i></div>
+                <h3 data-i18n="svc_3_title">Gestión y mantenimiento</h3>
+                <p data-i18n="svc_3_desc">Actualizaciones, respaldos y seguridad de tu WordPress, para que no tengas que
+                    pelearte con plugins y te enfoques en vender.</p>
             </div>
             <div class="svc-card reveal">
-                <span class="svc-tag live" data-i18n="svc_tag_live">● Disponible ahora</span>
                 <div class="svc-icon"><i class="bi bi-stars"></i></div>
-                <h3 data-i18n="svc_4_title">Marketing y Contenido</h3>
-                <p data-i18n="svc_4_desc">Piezas gráficas y contenido mensual para tus redes, creado por un diseñador
-                    gráfico.</p>
-            </div>
-            <div class="svc-card soon reveal">
-                <span class="svc-tag soon" data-i18n="svc_tag_soon">Próximamente</span>
-                <div class="svc-icon"><i class="bi bi-bullseye"></i></div>
-                <h3 data-i18n="svc_5_title">Automatización de Ventas</h3>
-                <p data-i18n="svc_5_desc">Seguimiento automático de tus prospectos para que ninguna oportunidad se
-                    enfríe ni se pierda.</p>
+                <h3 data-i18n="svc_4_title">Marketing y contenido</h3>
+                <p data-i18n="svc_4_desc">Piezas gráficas y contenido mensual para tus redes, hechos por diseño gráfico
+                    profesional.</p>
             </div>
         </div>
-        <div class="services-cta reveal-solo">
-            <a href="#precios" class="btn-primary" data-i18n="btn_view_pricing">Ver precios y armar tu cotización</a>
+        <p class="services-more reveal-solo">
+            <span data-i18n="services_more">¿Necesitas algo más grande, como un sistema, un panel o una app?</span>
+            <a href="#" data-wa="wa_msg_custom" target="_blank" rel="noopener" data-i18n="services_more_link">Lo cotizamos
+                en una conversación →</a>
+        </p>
+    </section>
+
+    <section id="comparar" class="why">
+        <div class="section-head reveal-solo">
+            <div class="section-eyebrow" data-i18n="compare_eyebrow">¿Cuál me conviene?</div>
+            <h2 data-i18n="compare_title">Sitio a la medida o WordPress</h2>
+            <p data-i18n="compare_lead">Las dos opciones son buenas; la diferencia está en lo que tu negocio necesita y en
+                lo que vas a pagar cada año.</p>
+        </div>
+        <div class="compare-grid reveal-group">
+            <div class="compare-card featured reveal">
+                <div class="compare-icon"><i class="bi bi-lightning-charge"></i></div>
+                <h3 data-i18n="cmp_a_title">Sitio a la medida</h3>
+                <dl>
+                    <dt data-i18n="cmp_ideal">Ideal si…</dt>
+                    <dd data-i18n="cmp_a_ideal">Tu sitio muestra tu negocio y te contactan por WhatsApp o formulario.</dd>
+                    <dt data-i18n="cmp_hosting">Servidor</dt>
+                    <dd data-i18n="cmp_a_hosting">Estático: sin pago mensual.</dd>
+                    <dt data-i18n="cmp_maint">Mantenimiento</dt>
+                    <dd data-i18n="cmp_a_maint">Casi nulo. Pagas cambios solo cuando los pides.</dd>
+                    <dt data-i18n="cmp_cost">Costo cada año</dt>
+                    <dd class="cmp-cost" data-i18n="cmp_a_cost">Solo el dominio: unos $12 – $25</dd>
+                </dl>
+            </div>
+            <div class="compare-card reveal">
+                <div class="compare-icon"><i class="bi bi-wordpress"></i></div>
+                <h3 data-i18n="cmp_b_title">WordPress</h3>
+                <dl>
+                    <dt data-i18n="cmp_ideal">Ideal si…</dt>
+                    <dd data-i18n="cmp_b_ideal">Quieres editar el contenido tú mismo, tener un blog o vender en línea.</dd>
+                    <dt data-i18n="cmp_hosting">Servidor</dt>
+                    <dd data-i18n="cmp_b_hosting">Necesita hosting con PHP y base de datos, con pago mensual.</dd>
+                    <dt data-i18n="cmp_maint">Mantenimiento</dt>
+                    <dd data-i18n="cmp_b_maint">Actualizaciones de plugins, respaldos y seguridad, todo el año.</dd>
+                    <dt data-i18n="cmp_cost">Costo cada año</dt>
+                    <dd class="cmp-cost" data-i18n="cmp_b_cost">Hosting y dominio: unos $50 – $160, más mantenimiento</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="compare-cta reveal-solo">
+            <p data-i18n="compare_cta_lead">¿No sabes cuál es para ti? Responde 3 preguntas y te lo digo.</p>
+            <a href="cotizar.html" class="btn-primary" data-i18n="compare_cta_btn">Descubrir mi opción</a>
+        </div>
+    </section>
+
+    <section id="paquetes">
+        <div class="section-head reveal-solo">
+            <div class="section-eyebrow" data-i18n="pkg_eyebrow">Paquetes</div>
+            <h2 data-i18n="pkg_title">Precios claros desde el inicio</h2>
+            <p data-i18n="pkg_lead">Un pago único por tu sitio. El precio final depende de tu proyecto y lo confirmamos
+                juntos antes de empezar.</p>
+        </div>
+        <div class="pkg-grid reveal-group">
+            <div class="pkg-card reveal">
+                <h3 data-i18n="pkg_1_name">Presencia</h3>
+                <p class="pkg-for" data-i18n="pkg_1_for">Para que te encuentren y te escriban.</p>
+                <div class="pkg-price"><span class="pkg-from" data-i18n="pkg_from">Desde</span> <span
+                        data-price="presencia"></span></div>
+                <ul class="pkg-list" data-i18n="pkg_1_list">
+                    <li>Landing page a la medida</li>
+                    <li>Botón de WhatsApp y formulario</li>
+                    <li>Publicada y protegida con Cloudflare</li>
+                    <li>Sin pago mensual de servidor</li>
+                    <li>2 rondas de cambios</li>
+                </ul>
+                <a href="#" class="btn-ghost pkg-btn" data-wa="wa_msg_pkg_presencia" target="_blank" rel="noopener"
+                    data-i18n="pkg_btn">Lo quiero</a>
+            </div>
+            <div class="pkg-card featured reveal">
+                <span class="pkg-badge" data-i18n="pkg_badge">Recomendado</span>
+                <h3 data-i18n="pkg_2_name">Negocio</h3>
+                <p class="pkg-for" data-i18n="pkg_2_for">Para mostrar tu empresa y tus servicios.</p>
+                <div class="pkg-price"><span class="pkg-from" data-i18n="pkg_from">Desde</span> <span
+                        data-price="negocio"></span></div>
+                <ul class="pkg-list" data-i18n="pkg_2_list">
+                    <li>Sitio de 4 a 6 páginas</li>
+                    <li>A la medida o en WordPress, según te convenga</li>
+                    <li>Dominio y correo profesional configurados</li>
+                    <li>Botón de WhatsApp y formulario</li>
+                    <li>2 rondas de cambios</li>
+                </ul>
+                <a href="#" class="btn-primary pkg-btn" data-wa="wa_msg_pkg_negocio" target="_blank" rel="noopener"
+                    data-i18n="pkg_btn">Lo quiero</a>
+            </div>
+            <div class="pkg-card reveal">
+                <h3 data-i18n="pkg_3_name">Tienda</h3>
+                <p class="pkg-for" data-i18n="pkg_3_for">Para vender en línea sin complicarte.</p>
+                <div class="pkg-price"><span class="pkg-from" data-i18n="pkg_from">Desde</span> <span
+                        data-price="tienda"></span></div>
+                <ul class="pkg-list" data-i18n="pkg_3_list">
+                    <li>Tienda WooCommerce lista para vender</li>
+                    <li>Hasta 30 productos cargados</li>
+                    <li>Pagos en línea o contra entrega, y envíos</li>
+                    <li>Capacitación para manejar tus pedidos</li>
+                    <li>2 rondas de cambios</li>
+                </ul>
+                <a href="#" class="btn-ghost pkg-btn" data-wa="wa_msg_pkg_tienda" target="_blank" rel="noopener"
+                    data-i18n="pkg_btn">Lo quiero</a>
+            </div>
+        </div>
+
+        <div class="addons-grid reveal-group">
+            <div class="addons-card reveal">
+                <h3 data-i18n="extras_title">Extras para cualquier paquete</h3>
+                <ul class="addons-list">
+                    <li><span data-i18n="extra_ai">Asistente con IA que responde a tus clientes 24/7</span><span
+                            class="addon-price"><span data-price="ia"></span> + <span data-price="iaMensual"></span><span
+                                data-i18n="per_month">/mes</span></span></li>
+                    <li><span data-i18n="extra_products">Carga de 10 productos adicionales</span><span
+                            class="addon-price" data-price="productos10"></span></li>
+                    <li><span data-i18n="extra_round">Ronda de cambios adicional</span><span class="addon-price"
+                            data-price="ronda"></span></li>
+                    <li><span data-i18n="extra_migrate">Pasar tu WordPress a un sitio sin pago mensual</span><span
+                            class="addon-price"><span data-i18n="pkg_from">Desde</span> <span
+                                data-price="migracion"></span></span></li>
+                </ul>
+            </div>
+            <div class="addons-card reveal">
+                <h3 data-i18n="maint_title">Mantenimiento para WordPress</h3>
+                <ul class="addons-list">
+                    <li><span><strong data-i18n="maint_1_name">Esencial</strong> — <span data-i18n="maint_1_desc">actualizaciones,
+                                respaldos y seguridad</span></span><span class="addon-price"><span
+                                data-price="mantEsencial"></span><span data-i18n="per_month">/mes</span></span></li>
+                    <li><span><strong data-i18n="maint_2_name">Completo</strong> — <span data-i18n="maint_2_desc">lo anterior +
+                                1 hora de cambios al mes</span></span><span class="addon-price"><span
+                                data-price="mantCompleto"></span><span data-i18n="per_month">/mes</span></span></li>
+                    <li><span data-i18n="maint_static">Sitios a la medida: sin plan mensual, cambios por hora cuando los
+                            necesites</span><span class="addon-price" data-i18n="maint_static_price">$10 – $30/h</span></li>
+                    <li><span data-i18n="extra_content">Contenido mensual para redes</span><span class="addon-price"><span
+                                data-price="redesMin"></span> – <span data-price="redesMax"></span><span
+                                data-i18n="per_month">/mes</span></span></li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -178,109 +306,6 @@
         </div>
     </section>
 
-    <section id="testimonios">
-        <div class="section-head reveal-solo">
-            <div class="section-eyebrow" data-i18n="testi_eyebrow">Lo que dicen</div>
-            <h2 data-i18n="testi_title">Confianza que se construye entregando</h2>
-            <p data-i18n="testi_lead">Espacio de ejemplo — aquí irán los testimonios reales de tus clientes a medida
-                que los vayas consiguiendo.</p>
-        </div>
-        <div class="testi-wrap reveal-solo">
-            <div class="testi-viewport">
-                <div class="testi-track">
-                    <div class="testi-slide">
-                        <p class="testi-quote" data-i18n="testi_1_quote">"LaColo nos entregó el sitio antes de lo
-                            prometido y el soporte mensual nos ha quitado un problema de encima."</p>
-                        <div class="testi-name">Marcela Hernández</div>
-                        <div class="testi-role" data-i18n="testi_1_role">Dueña, Repostería Dulce Trigo</div>
-                    </div>
-                    <div class="testi-slide">
-                        <p class="testi-quote" data-i18n="testi_2_quote">"Se nota la mezcla entre lo técnico y lo
-                            creativo. El sitio se ve profesional y carga muy rápido."</p>
-                        <div class="testi-name">Ricardo Alas</div>
-                        <div class="testi-role" data-i18n="testi_2_role">Gerente, Clínica Dental Sonrisas</div>
-                    </div>
-                    <div class="testi-slide">
-                        <p class="testi-quote" data-i18n="testi_3_quote">"El acompañamiento fue cercano en todo el
-                            proceso. Primero entendieron el negocio y después construyeron."</p>
-                        <div class="testi-name">Daniela Guzmán</div>
-                        <div class="testi-role" data-i18n="testi_3_role">Fundadora, Estudio Fit Daniela</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testi-nav">
-                <button class="testi-arrow testi-prev" aria-label="Anterior">←</button>
-                <div class="testi-dots"></div>
-                <button class="testi-arrow testi-next" aria-label="Siguiente">→</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="why" id="precios" style="background:var(--ink);">
-        <div class="section-head reveal-solo">
-            <div class="section-eyebrow" data-i18n="quote_eyebrow">Cotiza tu proyecto</div>
-            <h2 data-i18n="quote_title">Arma tu propuesta a tu medida</h2>
-            <p data-i18n="quote_lead">Elige lo que tu negocio necesita y mira el estimado en tiempo real. Al final,
-                nos escribes por WhatsApp y afinamos los detalles juntos.</p>
-        </div>
-
-        <div class="quote-chat-cta reveal-solo">
-            <div>
-                <strong data-i18n="quote_chat_title">¿No sabes qué elegir?</strong>
-                <p data-i18n="quote_chat_lead">Escríbenos por WhatsApp y te recomendamos lo ideal para tu negocio.</p>
-            </div>
-            <button type="button" class="btn-ghost" id="quote-open-chat" data-i18n="quote_chat_btn">Hablar por
-                WhatsApp</button>
-        </div>
-
-        <div class="quote-layout">
-            <div>
-                <div class="quote-areas" id="quote-areas"></div>
-            </div>
-            <aside class="quote-summary">
-                <div class="quote-summary-inner">
-                    <div class="quote-summary-label" data-i18n="quote_total_label">Total estimado</div>
-                    <div class="quote-summary-total" id="quote-total">$0</div>
-                    <div class="quote-summary-note" id="quote-note"></div>
-                    <ul class="quote-summary-list" id="quote-summary-list">
-                        <li class="empty" data-i18n="quote_empty">Aún no has elegido nada.</li>
-                    </ul>
-                    <button type="button" class="btn-primary" id="quote-submit-btn" style="width:100%;" disabled
-                        data-i18n="quote_submit">Enviar mi solicitud</button>
-                </div>
-            </aside>
-        </div>
-
-        <div class="quote-mobile-bar">
-            <div>
-                <div class="quote-mobile-total" id="quote-mobile-total">$0</div>
-                <div class="quote-mobile-label" data-i18n="quote_total_label">Total estimado</div>
-            </div>
-            <button type="button" class="btn-primary" id="quote-submit-btn-mobile" disabled
-                data-i18n="quote_submit_mobile">Enviar solicitud</button>
-        </div>
-    </section>
-
-    <!-- Modal de cotización -> WhatsApp -->
-    <div class="auth-modal" id="quote-modal">
-        <div class="auth-modal-box" style="max-width:420px;">
-            <button class="auth-modal-close" id="quote-modal-close" type="button">×</button>
-            <h3 data-i18n="quote_modal_title">Casi listo — cuéntanos cómo contactarte</h3>
-            <form id="quote-form">
-                <label for="quote-nombre" data-i18n="form_name_label">Nombre</label>
-                <input type="text" id="quote-nombre" autocomplete="name" required>
-
-                <label for="quote-empresa" data-i18n="form_company_label">Empresa o marca personal <span
-                        style="font-weight:400; text-transform:none; color:var(--pale-dim);"
-                        data-i18n="form_optional">(opcional)</span></label>
-                <input type="text" id="quote-empresa" autocomplete="organization">
-
-                <button class="btn-primary" id="quote-form-submit" style="width:100%; margin-top:18px;"
-                    type="submit" data-i18n="quote_modal_submit">Enviar por WhatsApp</button>
-            </form>
-        </div>
-    </div>
-
     <section id="proceso">
         <div class="section-head">
             <div class="section-eyebrow" data-i18n="process_eyebrow">Cómo trabajamos</div>
@@ -298,9 +323,9 @@
             <div class="step reveal">
                 <div class="step-num">02</div>
                 <div>
-                    <h3 data-i18n="step_2_title">Armamos tu cotización</h3>
-                    <p data-i18n="step_2_desc">Usas el configurador de precios o hablamos directo por WhatsApp para
-                        definir el alcance exacto.</p>
+                    <h3 data-i18n="step_2_title">Te recomiendo la opción justa</h3>
+                    <p data-i18n="step_2_desc">Sitio a la medida o WordPress, con el precio claro desde el inicio y
+                        sin costos que no necesitas.</p>
                 </div>
             </div>
             <div class="step reveal">
@@ -329,6 +354,15 @@
         </div>
         <div class="faq-wrap reveal-group">
             <div class="faq-item reveal open">
+                <button class="faq-q"><span data-i18n="faq_5_q">¿Por qué no hacer todo en WordPress?</span><span></span></button>
+                <div class="faq-a">
+                    <p data-i18n="faq_5_a">WordPress es excelente cuando necesitas editar contenido o vender en línea,
+                        pero requiere un servidor con pago mensual y mantenimiento constante. Si tu sitio solo muestra
+                        tu negocio y te contactan por WhatsApp, un sitio a la medida hace lo mismo, carga más rápido y
+                        solo pagas el dominio cada año.</p>
+                </div>
+            </div>
+            <div class="faq-item reveal">
                 <button class="faq-q"><span data-i18n="faq_1_q">¿Cuánto tarda en estar listo mi sitio web?</span><span></span></button>
                 <div class="faq-a">
                     <p data-i18n="faq_1_a">Depende del alcance, pero una landing page suele estar lista en 1-2
@@ -339,12 +373,10 @@
                 <button class="faq-q"><span data-i18n="faq_2_q">¿Qué pasa si quiero cambios después del
                         lanzamiento?</span><span></span></button>
                 <div class="faq-a">
-                    <p data-i18n="faq_2_a">Cada proyecto de sitio web incluye 2 rondas de cambios/revisiones antes
-                        del lanzamiento (puedes agregar rondas adicionales por $25 c/u desde el mismo configurador de
-                        precios). Una vez lanzado tu proyecto, cualquier cambio o ajuste nuevo se cotiza según el
-                        caso — no manejamos un plan mensual fijo. Usamos una tarifa por hora según la complejidad
-                        (desde $10/hora para ajustes simples, hasta $30/hora para trabajo que involucra IA real), así
-                        que solo pagas por el trabajo real que necesitas, cuando lo necesitas.</p>
+                    <p data-i18n="faq_2_a">Cada paquete incluye 2 rondas de cambios antes del lanzamiento. Después, en
+                        un sitio a la medida pagas solo los cambios que pidas, por hora ($10 – $30 según la
+                        complejidad). En WordPress te recomiendo un plan de mantenimiento mensual, porque necesita
+                        actualizaciones y respaldos aunque no cambies nada.</p>
                 </div>
             </div>
             <div class="faq-item reveal">
@@ -356,11 +388,10 @@
                 </div>
             </div>
             <div class="faq-item reveal">
-                <button class="faq-q"><span data-i18n="faq_4_q">¿Qué pasa después de enviar mi
-                        cotización?</span><span></span></button>
+                <button class="faq-q"><span data-i18n="faq_4_q">¿Qué pasa después de escribirte?</span><span></span></button>
                 <div class="faq-a">
-                    <p data-i18n="faq_4_a">Tu selección se envía por WhatsApp directamente a mí. Te respondo para
-                        afinar detalles, resolver dudas y confirmar el alcance final antes de arrancar.</p>
+                    <p data-i18n="faq_4_a">Tu mensaje me llega por WhatsApp. Te respondo para entender tu negocio,
+                        resolver dudas y confirmar el alcance y el precio final antes de arrancar.</p>
                 </div>
             </div>
         </div>
@@ -369,8 +400,8 @@
     <section>
         <div class="cta-band">
             <h2 data-i18n="cta_title">Tu negocio merece un sitio que trabaje mientras tú descansas.</h2>
-            <p data-i18n="cta_lead">Cuéntanos sobre tu negocio y te mostramos cómo se vería tu sitio.</p>
-            <a href="#contacto" class="btn-dark" data-i18n="cta_btn">Empezar ahora</a>
+            <p data-i18n="cta_lead">Responde 3 preguntas y te digo qué opción te conviene y cuánto costaría.</p>
+            <a href="cotizar.html" class="btn-dark" data-i18n="cta_btn">Cotizar mi proyecto</a>
         </div>
     </section>
 
@@ -422,18 +453,19 @@
                     placeholder="Tu nombre" required>
                 <label for="cf-msg" data-i18n="form_msg_label">Cuéntanos sobre tu negocio</label>
                 <textarea id="cf-msg" name="message" data-i18n="form_msg_placeholder"
-                    placeholder="¿Cómo podemos elevar su presencia digital?" required></textarea>
+                    placeholder="¿Qué vende tu negocio y cómo te contactan hoy tus clientes?" required></textarea>
                 <button type="submit" class="contact-submit" data-i18n="btn_send_whatsapp">Enviar por
                     WhatsApp</button>
             </form>
             <div class="contact-side-card">
                 <h3 data-i18n="contact_hablemos">Contacto directo</h3>
-                <a href="https://wa.me/+50377471010" class="wa-link">
+                <a href="https://wa.me/50377471010" class="wa-link" target="_blank" rel="noopener">
                     <i class="bi bi-whatsapp"></i> +503 7747-1010
                 </a>
                 <p class="note" data-i18n="contact_sub">Atención directa para proyectos de desarrollo y creativos.</p>
                 <div class="social-grid" style="display:flex; gap:14px; margin-top:24px;">
-                    <a href="https://wa.me/+50377471010" class="social-pill wa" aria-label="WhatsApp">
+                    <a href="https://wa.me/50377471010" class="social-pill wa" aria-label="WhatsApp" target="_blank"
+                        rel="noopener">
                         <i class="bi bi-whatsapp"></i>
                     </a>
                 </div>
