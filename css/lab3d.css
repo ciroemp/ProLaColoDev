@@ -1,0 +1,173 @@
+/* =========================================================
+   LACOLO — Estilos del prototipo 3D (lab.html)
+   Se cargan después de style.css.
+   ========================================================= */
+
+.lab-3d #servicios,
+.lab-3d #paquetes { overflow-x: clip; }
+
+/* ---- HERO con logo 3D ---- */
+.hero-3d { text-align: left; padding: 60px 6vw 80px; }
+.hero-grid {
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center;
+  max-width: 1200px; margin: 0 auto;
+}
+.hero-3d h1 { margin: 0; max-width: none; }
+.hero-3d p.sub { margin: 24px 0 0; }
+.hero-3d .hero-ctas { justify-content: flex-start; }
+
+.hero-visual { position: relative; width: 100%; aspect-ratio: 1 / 1; max-height: 540px; }
+.hero-visual canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%; display: block;
+  opacity: 0; transition: opacity .9s ease;
+}
+.prism-fallback {
+  position: absolute; left: 10%; top: 10%; width: 80%; height: 80%;
+  filter: drop-shadow(0 30px 50px rgba(226, 167, 159, .25));
+  animation: prism-float 6s ease-in-out infinite;
+  transition: opacity .6s ease;
+}
+.hero-visual.is-ready canvas { opacity: 1; }
+.hero-visual.is-ready .prism-fallback { opacity: 0; }
+@keyframes prism-float { 50% { transform: translateY(-10px) rotate(-1.5deg); } }
+
+@media (max-width: 860px) {
+  .hero-3d { padding: 30px 6vw 70px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 6px; text-align: center; }
+  .hero-visual { order: -1; aspect-ratio: auto; height: 270px; max-width: 380px; margin: 0 auto; }
+  .hero-3d .hero-ctas { justify-content: center; }
+  .hero-3d p.sub { margin: 20px auto 0; }
+}
+
+/* ---- CARRUSEL 3D (coverflow) ---- */
+.cf-on {
+  position: relative; perspective: 1400px; perspective-origin: 50% 40%;
+  touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; outline: none;
+}
+.cf-on.cf-dragging { cursor: grabbing; }
+.cf-on:focus-visible { outline: 2px solid var(--rose-bright); outline-offset: 10px; border-radius: 18px; }
+.cf-on > .cf-item {
+  position: absolute; top: var(--cf-pad, 0); left: 50%;
+  width: min(340px, 78vw); margin: 0;
+  transition: transform .6s cubic-bezier(.2, .8, .2, 1), opacity .45s ease, border-color .3s, box-shadow .3s;
+  will-change: transform; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.cf-on.cf-dragging > .cf-item { transition: none !important; }
+.cf-on > .cf-item.is-active { cursor: auto; }
+.cf-on > .svc-card.is-active {
+  border-color: rgba(226, 167, 159, .55);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+}
+.cf-on > .svc-card { min-height: 280px; }
+
+/* Sin JavaScript: las tarjetas quedan en cuadrícula */
+.cf-services .cf-track:not(.cf-on) {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;
+  max-width: 1150px; margin: 0 auto;
+}
+
+.cf-controls { display: flex; justify-content: center; align-items: center; gap: 18px; margin-top: 30px; }
+.cf-arrow {
+  width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line);
+  background: var(--ink-2); color: var(--pale); font-size: 17px; cursor: pointer;
+  transition: border-color .2s, color .2s, opacity .2s;
+}
+.cf-arrow:hover:not(:disabled) { border-color: var(--rose-bright); color: var(--rose-bright); }
+.cf-arrow:disabled { opacity: .3; cursor: default; }
+.cf-dots { display: flex; gap: 8px; align-items: center; }
+.cf-dot {
+  width: 8px; height: 8px; border-radius: 6px; background: var(--line);
+  border: none; padding: 0; cursor: pointer; transition: width .3s, background .3s;
+}
+.cf-dot[aria-current="true"] { background: var(--rose-bright); width: 24px; }
+
+/* ---- PAQUETES: inclinación 3D en escritorio, carrusel en móvil ---- */
+.pkg-slide { display: flex; }
+.pkg-slide > .pkg-card { flex: 1; }
+.pkg-card { transition: transform .18s ease-out, border-color .3s; transform-style: preserve-3d; }
+.pkg-card::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .10), transparent 45%);
+  opacity: 0; transition: opacity .3s;
+}
+.pkg-card.is-tilting::after { opacity: 1; }
+.pkg-grid.cf-on { display: block; max-width: none; }
+.pkg-grid.cf-on > .pkg-slide { width: min(340px, 82vw); }
+
+/* ---- TARJETAS QUE GIRAN (comparación) ---- */
+.flip { perspective: 1400px; display: flex; }
+.flip-inner {
+  flex: 1; display: grid; transform-style: preserve-3d;
+  transition: transform .75s cubic-bezier(.2, .8, .2, 1);
+}
+.flip-face {
+  grid-area: 1 / 1; display: flex; flex-direction: column;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.flip-back { transform: rotateY(180deg); }
+.flip.flipped .flip-inner { transform: rotateY(180deg); }
+.flip-face dl { margin-bottom: 22px; }
+.flip-btn {
+  margin-top: auto; align-self: flex-start;
+  background: none; border: 1px solid var(--line); color: var(--rose-bright);
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px;
+  padding: 9px 16px; border-radius: 20px; cursor: pointer; transition: border-color .2s;
+}
+.flip-btn:hover { border-color: var(--rose-bright); }
+.flip-btn i { margin: 0 2px; }
+
+/* ---- MURO DE ARTE URBANO (misión social) ---- */
+#impacto.mission-3d { position: relative; overflow: hidden; padding: 130px 6vw; background: var(--ink-2); }
+.wall-scene {
+  position: absolute; inset: 0; perspective: 1100px; perspective-origin: 30% 50%; pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.wall-stage {
+  position: absolute; top: 50%; left: -6%;
+  transform: translateY(-50%) rotateY(-24deg) rotateX(5deg); transform-style: preserve-3d;
+}
+.wall {
+  display: grid; grid-template-columns: repeat(8, 220px); grid-auto-rows: 150px; gap: 14px;
+  opacity: .5;
+}
+.tile {
+  border-radius: 10px; position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.tile span {
+  font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 36px; letter-spacing: 1px;
+  transform: rotate(-6deg); color: var(--ink);
+}
+.p0 { background: repeating-linear-gradient(45deg, #E2A79F 0 18px, #c98b82 18px 36px); }
+.p1 { background: radial-gradient(circle at 62% 50%, #E2A79F 0 32%, transparent 33%), #333; }
+.p2 { background: conic-gradient(#F2C14E 0 25%, #2b2b2b 0 50%, #F2C14E 0 75%, #2b2b2b 0) 0 0 / 56px 56px; }
+.p3 { background: radial-gradient(#0d0d0d 22%, transparent 24%) 0 0 / 22px 22px, #2BA59A; }
+.p4 { background: linear-gradient(135deg, #6E5BD8, #E2A79F); }
+.p5 { background: linear-gradient(135deg, #E8613C 25%, transparent 25%) -20px 0 / 40px 40px,
+                  linear-gradient(225deg, #E8613C 25%, transparent 25%) -20px 0 / 40px 40px,
+                  linear-gradient(315deg, #E8613C 25%, transparent 25%) 0 0 / 40px 40px,
+                  linear-gradient(45deg, #E8613C 25%, #f3a07f 25%) 0 0 / 40px 40px; }
+.p6 { background: repeating-linear-gradient(0deg, #d8d3d1 0 14px, #333 14px 20px); }
+.p7 { background: #0d0d0d; box-shadow: inset 0 0 0 10px #E2A79F; }
+.p1 span, .p3 span, .p7 span { color: var(--white); }
+
+.mission-card {
+  position: relative; z-index: 1; max-width: 660px; margin: 0 auto;
+  background: rgba(13, 13, 13, .74); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border: 1px solid var(--line); border-radius: 20px; padding: 44px 38px;
+}
+.mission-card .section-head { margin-bottom: 22px; }
+
+@media (max-width: 620px) {
+  #impacto.mission-3d { padding: 100px 6vw; }
+  .wall { grid-template-columns: repeat(8, 150px); grid-auto-rows: 104px; gap: 10px; }
+  .tile span { font-size: 24px; }
+  .mission-card { padding: 34px 24px; }
+}
+
+/* ---- Movimiento reducido: sin animaciones 3D ---- */
+@media (prefers-reduced-motion: reduce) {
+  .prism-fallback { animation: none; }
+  .flip-inner, .cf-on > .cf-item { transition: none; }
+}

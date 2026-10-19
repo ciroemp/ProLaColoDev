@@ -46,9 +46,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/efectos3d.css">
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+    </script>
 </head>
 
-<body>
+<body class="fx-3d">
 
     <nav>
         <a href="#" class="lockup small">
@@ -72,27 +82,62 @@
         </div>
     </nav>
 
-    <section class="hero">
+        <section class="hero hero-3d">
         <div class="parallax-blob parallax-blob-1"></div>
         <div class="parallax-blob parallax-blob-2"></div>
 
-        <div class="lockup large reveal-solo" style="margin: 0 auto 30px;">
-            <img class="lockup-icon" src="img/laColoDevs.png" alt="LaColo Dev">
-            <div class="lockup-col">
-                <span class="lockup-wordmark brand-titles">LACOLO</span>
-                <span class="lockup-tagline" data-i18n="hero_lockup_tag">Dev &amp; Creative</span>
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <div class="hero-eyebrow reveal-solo" data-i18n="hero_eyebrow">Desarrollo web + Diseño</div>
+                <h1 class="reveal-solo" data-i18n="hero_title">Tu sitio web, sin pagar de más.</h1>
+                <p class="sub reveal-solo" data-i18n="hero_lead">Te recomiendo la solución que tu negocio realmente
+                    necesita: un sitio a la medida, rápido y sin pago mensual de servidor, o WordPress cuando sí te
+                    conviene. Yo me encargo de toda la parte técnica para que tú te enfoques en tu negocio.</p>
+                <div class="hero-ctas reveal-solo">
+                    <a href="#paquetes" class="btn-primary" data-i18n="btn_packages">Ver paquetes</a>
+                    <a href="#" class="btn-ghost" data-wa="wa_msg_general" target="_blank" rel="noopener"><i
+                            class="bi bi-whatsapp"></i> <span data-i18n="btn_whatsapp">Escribir por WhatsApp</span></a>
+                </div>
             </div>
-        </div>
 
-        <div class="hero-eyebrow reveal-solo" data-i18n="hero_eyebrow">Desarrollo web + Diseño</div>
-        <h1 class="reveal-solo" data-i18n="hero_title">Tu sitio web, sin pagar de más.</h1>
-        <p class="sub reveal-solo" data-i18n="hero_lead">Te recomiendo la solución que tu negocio realmente necesita: un
-            sitio a la medida, rápido y sin pago mensual de servidor, o WordPress cuando sí te conviene. Yo me encargo de
-            toda la parte técnica para que tú te enfoques en tu negocio.</p>
-        <div class="hero-ctas reveal-solo">
-            <a href="#paquetes" class="btn-primary" data-i18n="btn_packages">Ver paquetes</a>
-            <a href="#" class="btn-ghost" data-wa="wa_msg_general" target="_blank" rel="noopener"><i
-                    class="bi bi-whatsapp"></i> <span data-i18n="btn_whatsapp">Escribir por WhatsApp</span></a>
+            <!-- Logo 3D: primero se ve el SVG (plan B) y, si el equipo lo soporta, se cambia por el modelo 3D -->
+            <div class="hero-visual" id="hero-visual" aria-hidden="true">
+                <svg class="prism-fallback" viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="pf-metal" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#f7d6cf" />
+                            <stop offset=".35" stop-color="#E2A79F" />
+                            <stop offset=".6" stop-color="#a8716a" />
+                            <stop offset=".8" stop-color="#ecbcb5" />
+                            <stop offset="1" stop-color="#c98b82" />
+                        </linearGradient>
+                        <filter id="pf-glow" x="-30%" y="-30%" width="160%" height="160%">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+                            <feFlood flood-color="#ff7f9c" result="pink" />
+                            <feComposite in="pink" in2="blur" operator="in" result="glow" />
+                            <feMerge>
+                                <feMergeNode in="glow" />
+                                <feMergeNode in="glow" />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path fill="url(#pf-metal)" fill-rule="evenodd"
+                        d="M120 29.5 L215.7 195.3 L24.3 195.3 Z M97.5 110.8 L142.5 110.8 L179.1 174.1 L60.9 174.1 Z" />
+                    <polygon points="120,78.3 103.1,107.5 120,97.8" fill="#f3cdc5" />
+                    <polygon points="120,78.3 136.9,107.5 120,97.8" fill="#c98b82" />
+                    <polygon points="103.1,107.5 136.9,107.5 120,97.8" fill="#a8716a" />
+                    <polygon points="120,123.8 103.1,153 120,143.3" fill="#f3cdc5" />
+                    <polygon points="120,123.8 136.9,153 120,143.3" fill="#c98b82" />
+                    <polygon points="103.1,153 136.9,153 120,143.3" fill="#a8716a" />
+                    <g class="pf-neon" fill="none" stroke="#ffd6de" stroke-width="2.2" stroke-linejoin="round"
+                        filter="url(#pf-glow)">
+                        <path d="M120 29.5 L215.7 195.3 L24.3 195.3 Z" />
+                        <path d="M97.5 110.8 L142.5 110.8 L179.1 174.1 L60.9 174.1 Z" />
+                    </g>
+                </svg>
+                <canvas id="hero-canvas"></canvas>
+            </div>
         </div>
     </section>
 
@@ -105,47 +150,49 @@
                 cercano</div></div>
     </div>
 
-    <section id="servicios">
+        <section id="servicios">
         <div class="section-head">
             <div class="section-eyebrow" data-i18n="services_eyebrow">Lo que hacemos</div>
             <h2 data-i18n="services_title">Lo justo para tu negocio</h2>
             <p data-i18n="services_lead">Trabajo con HTML, CSS, JavaScript y PHP, y también con WordPress. Por eso puedo
                 recomendarte lo que de verdad te conviene, no lo único que sé hacer.</p>
         </div>
-        <div class="services-grid four reveal-group">
-            <div class="svc-card reveal">
-                <div class="svc-icon"><i class="bi bi-lightning-charge"></i></div>
-                <h3 data-i18n="svc_1_title">Sitios a la medida</h3>
-                <p data-i18n="svc_1_desc">Landing pages y sitios corporativos rápidos y seguros, sin pago mensual de
-                    servidor. Ideales si tu sitio muestra tu negocio y tus clientes te contactan por WhatsApp.</p>
-            </div>
-            <div class="svc-card reveal">
-                <div class="svc-icon"><i class="bi bi-bag-check"></i></div>
-                <h3 data-i18n="svc_2_title">WordPress y tiendas en línea</h3>
-                <p data-i18n="svc_2_desc">Creo tu sitio o tienda con WooCommerce y dejo todo configurado: productos,
-                    pagos o contra entrega, envíos, dominio, correo y conexiones con WhatsApp, Google y Meta.</p>
-            </div>
-            <div class="svc-card reveal">
-                <div class="svc-icon"><i class="bi bi-tools"></i></div>
-                <h3 data-i18n="svc_3_title">Gestión y mantenimiento</h3>
-                <p data-i18n="svc_3_desc">Actualizaciones, respaldos y seguridad de tu WordPress, para que no tengas que
-                    pelearte con plugins y te enfoques en vender.</p>
-            </div>
-            <div class="svc-card reveal">
-                <div class="svc-icon"><i class="bi bi-stars"></i></div>
-                <h3 data-i18n="svc_4_title">Marketing y contenido</h3>
-                <p data-i18n="svc_4_desc">Piezas gráficas y contenido mensual para tus redes, hechos por diseño gráfico
-                    profesional.</p>
+        <div class="cf cf-services reveal-solo">
+            <div class="cf-track" id="svc-track">
+                <article class="cf-item svc-card">
+                    <div class="svc-icon"><i class="bi bi-lightning-charge"></i></div>
+                    <h3 data-i18n="svc_1_title">Sitios a la medida</h3>
+                    <p data-i18n="svc_1_desc">Landing pages y sitios corporativos rápidos y seguros, sin pago mensual de
+                        servidor. Ideales si tu sitio muestra tu negocio y tus clientes te contactan por WhatsApp.</p>
+                </article>
+                <article class="cf-item svc-card">
+                    <div class="svc-icon"><i class="bi bi-bag-check"></i></div>
+                    <h3 data-i18n="svc_2_title">WordPress y tiendas en línea</h3>
+                    <p data-i18n="svc_2_desc">Creo tu sitio o tienda con WooCommerce y dejo todo configurado: productos,
+                        pagos o contra entrega, envíos, dominio, correo y conexiones con WhatsApp, Google y Meta.</p>
+                </article>
+                <article class="cf-item svc-card">
+                    <div class="svc-icon"><i class="bi bi-tools"></i></div>
+                    <h3 data-i18n="svc_3_title">Gestión y mantenimiento</h3>
+                    <p data-i18n="svc_3_desc">Actualizaciones, respaldos y seguridad de tu WordPress, para que no tengas
+                        que pelearte con plugins y te enfoques en vender.</p>
+                </article>
+                <article class="cf-item svc-card">
+                    <div class="svc-icon"><i class="bi bi-stars"></i></div>
+                    <h3 data-i18n="svc_4_title">Marketing y contenido</h3>
+                    <p data-i18n="svc_4_desc">Piezas gráficas y contenido mensual para tus redes, hechos por diseño
+                        gráfico profesional.</p>
+                </article>
             </div>
         </div>
         <p class="services-more reveal-solo">
             <span data-i18n="services_more">¿Necesitas algo más grande, como un sistema, un panel o una app?</span>
-            <a href="#" data-wa="wa_msg_custom" target="_blank" rel="noopener" data-i18n="services_more_link">Lo cotizamos
-                en una conversación →</a>
+            <a href="#" data-wa="wa_msg_custom" target="_blank" rel="noopener" data-i18n="services_more_link">Lo
+                cotizamos en una conversación →</a>
         </p>
     </section>
 
-    <section id="comparar" class="why">
+        <section id="comparar" class="why">
         <div class="section-head reveal-solo">
             <div class="section-eyebrow" data-i18n="compare_eyebrow">¿Cuál me conviene?</div>
             <h2 data-i18n="compare_title">Sitio a la medida o WordPress</h2>
@@ -153,33 +200,62 @@
                 lo que vas a pagar cada año.</p>
         </div>
         <div class="compare-grid reveal-group">
-            <div class="compare-card featured reveal">
-                <div class="compare-icon"><i class="bi bi-lightning-charge"></i></div>
-                <h3 data-i18n="cmp_a_title">Sitio a la medida</h3>
-                <dl>
-                    <dt data-i18n="cmp_ideal">Ideal si…</dt>
-                    <dd data-i18n="cmp_a_ideal">Tu sitio muestra tu negocio y te contactan por WhatsApp o formulario.</dd>
-                    <dt data-i18n="cmp_hosting">Servidor</dt>
-                    <dd data-i18n="cmp_a_hosting">Estático: sin pago mensual.</dd>
-                    <dt data-i18n="cmp_maint">Mantenimiento</dt>
-                    <dd data-i18n="cmp_a_maint">Casi nulo. Pagas cambios solo cuando los pides.</dd>
-                    <dt data-i18n="cmp_cost">Costo cada año</dt>
-                    <dd class="cmp-cost" data-i18n="cmp_a_cost">Solo el dominio: unos $12 – $25</dd>
-                </dl>
+            <div class="flip reveal">
+                <div class="flip-inner">
+                    <div class="flip-face flip-front compare-card featured">
+                        <div class="compare-icon"><i class="bi bi-lightning-charge"></i></div>
+                        <h3 data-i18n="cmp_a_title">Sitio a la medida</h3>
+                        <dl>
+                            <dt data-i18n="cmp_ideal">Ideal si…</dt>
+                            <dd data-i18n="cmp_a_ideal">Tu sitio muestra tu negocio y te contactan por WhatsApp o
+                                formulario.</dd>
+                            <dt data-i18n="cmp_cost">Costo cada año</dt>
+                            <dd class="cmp-cost" data-i18n="cmp_a_cost">Solo el dominio: unos $12 – $25</dd>
+                        </dl>
+                        <button type="button" class="flip-btn"><span data-i18n="flip_more">Ver detalles</span> <i
+                                class="bi bi-arrow-repeat"></i></button>
+                    </div>
+                    <div class="flip-face flip-back compare-card featured">
+                        <h3 data-i18n="cmp_a_title">Sitio a la medida</h3>
+                        <dl>
+                            <dt data-i18n="cmp_hosting">Servidor</dt>
+                            <dd data-i18n="cmp_a_hosting">Estático: sin pago mensual.</dd>
+                            <dt data-i18n="cmp_maint">Mantenimiento</dt>
+                            <dd data-i18n="cmp_a_maint">Casi nulo. Pagas cambios solo cuando los pides.</dd>
+                        </dl>
+                        <button type="button" class="flip-btn"><i class="bi bi-arrow-left"></i> <span
+                                data-i18n="flip_back">Volver</span></button>
+                    </div>
+                </div>
             </div>
-            <div class="compare-card reveal">
-                <div class="compare-icon"><i class="bi bi-wordpress"></i></div>
-                <h3 data-i18n="cmp_b_title">WordPress</h3>
-                <dl>
-                    <dt data-i18n="cmp_ideal">Ideal si…</dt>
-                    <dd data-i18n="cmp_b_ideal">Quieres editar el contenido tú mismo, tener un blog o vender en línea.</dd>
-                    <dt data-i18n="cmp_hosting">Servidor</dt>
-                    <dd data-i18n="cmp_b_hosting">Necesita hosting con PHP y base de datos, con pago mensual.</dd>
-                    <dt data-i18n="cmp_maint">Mantenimiento</dt>
-                    <dd data-i18n="cmp_b_maint">Actualizaciones de plugins, respaldos y seguridad, todo el año.</dd>
-                    <dt data-i18n="cmp_cost">Costo cada año</dt>
-                    <dd class="cmp-cost" data-i18n="cmp_b_cost">Hosting y dominio: unos $50 – $160, más mantenimiento</dd>
-                </dl>
+            <div class="flip reveal">
+                <div class="flip-inner">
+                    <div class="flip-face flip-front compare-card">
+                        <div class="compare-icon"><i class="bi bi-wordpress"></i></div>
+                        <h3 data-i18n="cmp_b_title">WordPress</h3>
+                        <dl>
+                            <dt data-i18n="cmp_ideal">Ideal si…</dt>
+                            <dd data-i18n="cmp_b_ideal">Quieres editar el contenido tú mismo, tener un blog o vender en
+                                línea.</dd>
+                            <dt data-i18n="cmp_cost">Costo cada año</dt>
+                            <dd class="cmp-cost" data-i18n="cmp_b_cost">Hosting y dominio: unos $50 – $160, más
+                                mantenimiento</dd>
+                        </dl>
+                        <button type="button" class="flip-btn"><span data-i18n="flip_more">Ver detalles</span> <i
+                                class="bi bi-arrow-repeat"></i></button>
+                    </div>
+                    <div class="flip-face flip-back compare-card">
+                        <h3 data-i18n="cmp_b_title">WordPress</h3>
+                        <dl>
+                            <dt data-i18n="cmp_hosting">Servidor</dt>
+                            <dd data-i18n="cmp_b_hosting">Necesita hosting con PHP y base de datos, con pago mensual.</dd>
+                            <dt data-i18n="cmp_maint">Mantenimiento</dt>
+                            <dd data-i18n="cmp_b_maint">Actualizaciones de plugins, respaldos y seguridad, todo el año.</dd>
+                        </dl>
+                        <button type="button" class="flip-btn"><i class="bi bi-arrow-left"></i> <span
+                                data-i18n="flip_back">Volver</span></button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="compare-cta reveal-solo">
@@ -195,8 +271,8 @@
             <p data-i18n="pkg_lead">Un pago único por tu sitio. El precio final depende de tu proyecto y lo confirmamos
                 juntos antes de empezar.</p>
         </div>
-        <div class="pkg-grid reveal-group">
-            <div class="pkg-card reveal">
+        <div class="pkg-grid reveal-solo" id="pkg-track">
+            <div class="pkg-slide cf-item"><div class="pkg-card">
                 <h3 data-i18n="pkg_1_name">Presencia</h3>
                 <p class="pkg-for" data-i18n="pkg_1_for">Para que te encuentren y te escriban.</p>
                 <div class="pkg-price"><span class="pkg-from" data-i18n="pkg_from">Desde</span> <span
@@ -210,8 +286,8 @@
                 </ul>
                 <a href="#" class="btn-ghost pkg-btn" data-wa="wa_msg_pkg_presencia" target="_blank" rel="noopener"
                     data-i18n="pkg_btn">Lo quiero</a>
-            </div>
-            <div class="pkg-card featured reveal">
+            </div></div>
+            <div class="pkg-slide cf-item"><div class="pkg-card featured">
                 <span class="pkg-badge" data-i18n="pkg_badge">Recomendado</span>
                 <h3 data-i18n="pkg_2_name">Negocio</h3>
                 <p class="pkg-for" data-i18n="pkg_2_for">Para mostrar tu empresa y tus servicios.</p>
@@ -226,8 +302,8 @@
                 </ul>
                 <a href="#" class="btn-primary pkg-btn" data-wa="wa_msg_pkg_negocio" target="_blank" rel="noopener"
                     data-i18n="pkg_btn">Lo quiero</a>
-            </div>
-            <div class="pkg-card reveal">
+            </div></div>
+            <div class="pkg-slide cf-item"><div class="pkg-card">
                 <h3 data-i18n="pkg_3_name">Tienda</h3>
                 <p class="pkg-for" data-i18n="pkg_3_for">Para vender en línea sin complicarte.</p>
                 <div class="pkg-price"><span class="pkg-from" data-i18n="pkg_from">Desde</span> <span
@@ -241,7 +317,7 @@
                 </ul>
                 <a href="#" class="btn-ghost pkg-btn" data-wa="wa_msg_pkg_tienda" target="_blank" rel="noopener"
                     data-i18n="pkg_btn">Lo quiero</a>
-            </div>
+            </div></div>
         </div>
 
         <div class="addons-grid reveal-group">
@@ -405,15 +481,22 @@
         </div>
     </section>
 
-    <section id="impacto" class="why">
-        <div class="section-head reveal-solo">
-            <div class="section-eyebrow" data-i18n="impact_eyebrow">Más que código</div>
-            <h2 data-i18n="impact_title">Nuestra Misión Social</h2>
+        <section id="impacto" class="mission-3d">
+        <div class="wall-scene" aria-hidden="true">
+            <div class="wall-stage">
+                <div class="wall" id="mission-wall"></div>
+            </div>
         </div>
-        <div class="impact-wrap reveal-solo">
-            <p data-i18n="impact_lead">En LaColo, creemos que la tecnología debe ser una fuerza para el bien.</p>
-            <p data-i18n="impact_text">Un porcentaje de cada proyecto se destina directamente a financiar proyectos
-                de arte urbano para jóvenes en El Salvador.</p>
+        <div class="mission-card reveal-solo">
+            <div class="section-head">
+                <div class="section-eyebrow" data-i18n="impact_eyebrow">Más que código</div>
+                <h2 data-i18n="impact_title">Nuestra Misión Social</h2>
+            </div>
+            <div class="impact-wrap">
+                <p data-i18n="impact_lead">En LaColo, creemos que la tecnología debe ser una fuerza para el bien.</p>
+                <p data-i18n="impact_text">Un porcentaje de cada proyecto se destina directamente a financiar proyectos
+                    de arte urbano para jóvenes en El Salvador.</p>
+            </div>
         </div>
     </section>
 
@@ -514,6 +597,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/efectos3d.js"></script>
 </body>
 
 </html>
