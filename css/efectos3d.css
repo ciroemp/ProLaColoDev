@@ -284,3 +284,5 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-visual::before, .fx-3d .hero-eyebrow, .fx-3d .tile span { animation: none !important; }
 }
+
+.fx-3d .compare-card dd.cmp-price { text-shadow: 0 0 16px var(--neon-soft); }
